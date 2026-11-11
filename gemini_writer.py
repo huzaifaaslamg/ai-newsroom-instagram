@@ -30,7 +30,7 @@ def create_news_brief(candidates: list[dict], slot: str, local_date: str) -> dic
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY is missing. Add it in GitHub Settings > Secrets and variables > Actions.")
-    model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
+    model = (os.getenv("GEMINI_MODEL") or "gemini-3.8-flash").strip()
     client = genai.Client(api_key=api_key)
     source_pack = [{
         "id": item["id"], "headline": item["title"],
