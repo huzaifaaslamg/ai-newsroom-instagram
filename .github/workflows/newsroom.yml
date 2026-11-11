@@ -1,0 +1,105 @@
+name: AI Newsroom - Morning and Evening
+
+on:
+  schedule:
+    - cron: '7 8 * * *'
+      timezone: Asia/Karachi
+    - cron: '7 20 * * *'
+      timezone: Asia/Karachi
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: Which edition to generate
+        required: true
+        type: choice
+        options:
+          - auto
+          - morning
+          - evening
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-newsroom-publishing
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install Urdu font support
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-core
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch news and build visual posts
+        id: build
+        env:
+          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: \${{ vars.GEMINI_MODEL }}
+          SLOT_INPUT: \${{ inputs.slot }}
+        run: |
+          SLOT="\${SLOT_INPUT:-auto}"
+          MANIFEST="$(python main.py --slot "$SLOT")"
+          echo "manifest=$MANIFEST" >> "$GITHUB_OUTPUT"
+
+      - name: Commit generated images and manifest
+        if: steps.build.outputs.manifest != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published/
+          if git diff --cached --quiet; then
+            echo "No generated files to commit."
+          else
+            git commit -m "Generate newsroom edition $GITHUB_RUN_NUMBER"
+            git push
+          fi
+
+      - name: Publish posts to Instagram
+        if: steps.build.outputs.manifest != ''
+        env:
+          AUTO_PUBLISH: \${{ vars.AUTO_PUBLISH }}
+          INSTAGRAM_USER_ID: \${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: \${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_GRAPH_BASE: \${{ vars.INSTAGRAM_GRAPH_BASE }}
+          INSTAGRAM_API_VERSION: \${{ vars.INSTAGRAM_API_VERSION }}
+          GITHUB_REPOSITORY: \${{ github.repository }}
+          GITHUB_REF_NAME: \${{ github.ref_name }}
+        run: |
+          python publish.py --manifest "\${{ steps.build.outputs.manifest }}"
+
+      - name: Save publishing state
+        if: always() && steps.build.outputs.manifest != ''
+        run: |
+          if [ ! -f state/published.json ]; then
+            echo "No publishing state to save."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/published.json
+          if git diff --cached --quiet; then
+            echo "Publishing state is unchanged."
+          else
+            git commit -m "Record newsroom publishing state $GITHUB_RUN_NUMBER"
+            git push
+          fi
