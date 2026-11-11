@@ -1,9 +1,12 @@
 """Fast offline smoke test for the editorial image renderer."""
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import sys
 
 from PIL import Image
 
+# Allow direct execution as `python tests/smoke_test.py` from the repo root.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from image_generator import generate_assets
 
 def main():
