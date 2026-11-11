@@ -126,7 +126,7 @@ Reporting supplied:
     def make_caption(en: str, ur: str) -> str:
         source_lines = [
             f"• {source['domain']}: {source['url']}"
-            for source in _unique_sources(stories)
+            for source in _unique_sources(stories)[:5]
         ]
         parts = [
             str(en).strip(), str(ur).strip(),
