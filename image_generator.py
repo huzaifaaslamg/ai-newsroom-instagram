@@ -21,6 +21,11 @@ def font(size: int, bold: bool = False, rtl: bool = False):
             pass
     return ImageFont.load_default()
 
+def draw_rtl(draw, value: str, xy: tuple[int, int], size: int,
+             fill: str = INK, anchor: str = "ra"):
+    shaped = get_display(arabic_reshaper.reshape(str(value or "")))
+    draw.text(xy, shaped, font=font(size, rtl=True), fill=fill, anchor=anchor)
+
 def wrap_text(value: str, max_chars: int) -> list[str]:
     return textwrap.wrap(str(value or ""), width=max_chars, break_long_words=False) or [""]
 
@@ -64,14 +69,12 @@ def cover(date_label: str, slot: str, count: int, path: Path):
     draw.text((m, 235), "TODAY'S TOP STORIES", font=font(31, True), fill=ACCENT)
     draw.text((m, 315), "THE WORLD", font=font(100, True), fill=INK)
     draw.text((m, 435), "BRIEF.", font=font(130, True), fill=INK)
-    draw.text((W-m, 605), "دنیا کی اہم خبریں", font=font(66, rtl=True),
-              fill=INK, anchor="ra")
+    draw_rtl(draw, "دنیا کی اہم خبریں", (W-m, 605), 66, INK)
     draw.rounded_rectangle((m, 760, W-m, 1000), radius=24, fill=INK)
     draw.text((m+34, 805), f"{count:02d}", font=font(104, True), fill=WHITE)
     draw.text((m+220, 846), "STORIES  ·  ONE CLEAR BRIEF",
               font=font(27, True), fill=WHITE)
-    draw.text((m+220, 905), "خبر، پس منظر اور اہمیت",
-              font=font(34, rtl=True), fill=WHITE)
+    draw_rtl(draw, "خبر، پس منظر اور اہمیت", (m+220, 905), 34, WHITE, anchor="la")
     draw.text((m, 1100), "Swipe for the facts. Sources in caption.",
               font=font(23), fill=MUTED)
     save(image, path)
@@ -84,20 +87,24 @@ def story_slide(story: dict, date_label: str, slot: str,
               font=font(20, True), fill=WHITE)
     draw.text((W-m, 176), f"STORY {index:02d}", font=font(20, True),
               fill=MUTED, anchor="ra")
-    y = draw_block(draw, story["headline_en"], m, 260, W-2*m, 53,
-                   bold=True, max_lines=3, gap=20)
+    y = draw_block(draw, story["headline_en"], m, 260, W-2*m, 50,
+                   bold=True, max_lines=2, gap=18)
     draw.line((m, y, W-m, y), fill=RULE, width=2)
     y += 28
-    y = draw_block(draw, story["headline_ur"], m, y, W-2*m, 43,
-                   rtl=True, max_lines=3, gap=14)
-    y = draw_block(draw, story["summary_en"], m, y, W-2*m, 27,
-                   color="#3E3E3E", max_lines=4, gap=12)
-    y = draw_block(draw, story["summary_ur"], m, y, W-2*m, 27,
-                   color="#3E3E3E", rtl=True, max_lines=4, gap=10)
-    draw.text((m, min(y+8, 1122)), "WHY IT MATTERS",
-              font=font(19, True), fill=ACCENT)
-    draw_block(draw, story["why_en"], m, min(y+42, 1155), W-2*m, 21,
-               color=MUTED, max_lines=2, gap=0)
+    y = draw_block(draw, story["headline_ur"], m, y, W-2*m, 41,
+                   rtl=True, max_lines=2, gap=12)
+    y = draw_block(draw, story["summary_en"], m, y, W-2*m, 25,
+                   color="#3E3E3E", max_lines=3, gap=10)
+    y = draw_block(draw, story["summary_ur"], m, y, W-2*m, 25,
+                   color="#3E3E3E", rtl=True, max_lines=3, gap=8)
+    why_y = min(y+8, 1085)
+    draw.text((m, why_y), "WHY IT MATTERS / AHAMIYAT",
+              font=font(17, True), fill=ACCENT)
+    why_text_y = min(why_y+35, 1120)
+    next_y = draw_block(draw, story["why_en"], m, why_text_y, W-2*m, 18,
+                        color=MUTED, max_lines=1, gap=2)
+    draw_block(draw, story["why_ur"], m, next_y, W-2*m, 19,
+               color=MUTED, rtl=True, max_lines=1, gap=0)
     domains = ", ".join(sorted({s["domain"] for s in story["sources"]}))
     draw.text((m, 1208), f"REPORTING: {domains[:75]}",
               font=font(15), fill=MUTED)
@@ -108,8 +115,7 @@ def sources_slide(brief: dict, date_label: str, slot: str,
     image, draw, m = base_canvas(date_label, slot, f"{index:02d} / {total:02d}")
     draw.text((m, 220), "READ BEYOND THE HEADLINES",
               font=font(42, True), fill=INK)
-    draw.text((W-m, 310), "اصل رپورٹس پڑھیں", font=font(45, rtl=True),
-              fill=INK, anchor="ra")
+    draw_rtl(draw, "اصل رپورٹس پڑھیں", (W-m, 310), 45, INK)
     y, seen = 410, set()
     for story in brief["stories"]:
         for source in story["sources"]:
