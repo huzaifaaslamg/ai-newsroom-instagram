@@ -53,11 +53,11 @@ jobs:
       - name: Fetch news and build visual posts
         id: build
         env:
-          GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: \${{ vars.GEMINI_MODEL }}
-          SLOT_INPUT: \${{ inputs.slot }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          SLOT_INPUT: ${{ inputs.slot }}
         run: |
-          SLOT="\${SLOT_INPUT:-auto}"
+          SLOT="${SLOT_INPUT:-auto}"
           MANIFEST="$(python main.py --slot "$SLOT")"
           echo "manifest=$MANIFEST" >> "$GITHUB_OUTPUT"
 
@@ -77,15 +77,15 @@ jobs:
       - name: Publish posts to Instagram
         if: steps.build.outputs.manifest != ''
         env:
-          AUTO_PUBLISH: \${{ vars.AUTO_PUBLISH }}
-          INSTAGRAM_USER_ID: \${{ secrets.INSTAGRAM_USER_ID }}
-          INSTAGRAM_ACCESS_TOKEN: \${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-          INSTAGRAM_GRAPH_BASE: \${{ vars.INSTAGRAM_GRAPH_BASE }}
-          INSTAGRAM_API_VERSION: \${{ vars.INSTAGRAM_API_VERSION }}
-          GITHUB_REPOSITORY: \${{ github.repository }}
-          GITHUB_REF_NAME: \${{ github.ref_name }}
+          AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_GRAPH_BASE: ${{ vars.INSTAGRAM_GRAPH_BASE }}
+          INSTAGRAM_API_VERSION: ${{ vars.INSTAGRAM_API_VERSION }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
         run: |
-          python publish.py --manifest "\${{ steps.build.outputs.manifest }}"
+          python publish.py --manifest "${{ steps.build.outputs.manifest }}"
 
       - name: Save publishing state
         if: always() && steps.build.outputs.manifest != ''
