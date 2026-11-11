@@ -50,6 +50,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Validate Python syntax
+        run: python -m compileall -q .
+
       - name: Fetch news and build visual posts
         id: build
         env:
