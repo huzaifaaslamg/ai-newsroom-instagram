@@ -88,7 +88,7 @@ Optional repository variables:
 |---|---|
 | AUTO_PUBLISH | true only after preview/testing |
 | INSTAGRAM_GRAPH_BASE | https://graph.instagram.com |
-| INSTAGRAM_API_VERSION | v25.0 |
+| INSTAGRAM_API_VERSION | v27.0 |
 
 **Publishing is disabled unless AUTO_PUBLISH is exactly true.** Keep it unset while testing. Never paste access tokens or API keys into files, chat, issues, or commits.
 
