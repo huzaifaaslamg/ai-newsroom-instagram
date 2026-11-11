@@ -22,7 +22,7 @@ def _parse_date(value: str | None):
     except ValueError:
         return None
 
-def fetch_recent_article_index(hours: int = 12, limit: int = 70) -> list[dict]:
+def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
     params = {
         "query": "sourcelang:english (world OR politics OR business OR economy OR technology OR science OR health OR climate OR sports OR conflict)",
         "mode": "ArtList", "format": "json", "sort": "DateDesc",
