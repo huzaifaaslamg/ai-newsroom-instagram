@@ -21,7 +21,7 @@ class InstagramPublisher:
         self.user_id = os.getenv("INSTAGRAM_USER_ID", "").strip()
         self.token = os.getenv("INSTAGRAM_ACCESS_TOKEN", "").strip()
         self.base = (os.getenv("INSTAGRAM_GRAPH_BASE") or "https://graph.instagram.com").rstrip("/")
-        self.version = (os.getenv("INSTAGRAM_API_VERSION") or "v25.0").strip()
+        self.version = (os.getenv("INSTAGRAM_API_VERSION") or "v27.0").strip()
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": "AI-Newsroom/1.0"})
 
