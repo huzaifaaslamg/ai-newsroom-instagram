@@ -2,7 +2,7 @@
 
 A bilingual (English + Urdu) global-news publisher for an Instagram Professional account. The workflow runs at **08:07 and 20:07 Asia/Karachi**. Each run builds:
 
-1. A 7-slide editorial news carousel (cover, five story slides, sources page).
+1. An editorial news carousel of up to 7 slides (cover, four or five story slides, sources page).
 2. A single-image explainer for the leading story.
 3. Bilingual captions, source links, and relevant hashtags.
 
