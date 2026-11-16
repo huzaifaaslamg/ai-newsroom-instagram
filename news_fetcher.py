@@ -106,19 +106,13 @@ def _rss_description(value: str | None) -> str:
     return re.sub(r"\s+", " ", plain).strip()
 
 
-def _fetch_google_news_rss(hours: int = 24, limit: int = 35) -> list[dict]:
-    """Backup headline index used when GDELT is rate-limited or empty."""
-    query = (
-        "(world OR politics OR business OR economy OR technology OR science "
-        "OR health OR climate OR sports OR conflict) when:1d"
-    )
-    response = _get_with_retries(
-        GOOGLE_NEWS_RSS_URL,
-        params={"q": query, "hl": "en-US", "gl": "US", "ceid": "US:en"},
-    )
-    response.raise_for_status()
-
-    root = ET.fromstring(response.content)
+def _parse_google_news_rss(
+    xml_content: bytes,
+    hours: int = 24,
+    limit: int = 35,
+) -> list[dict]:
+    """Parse Google News RSS XML into the common article-index format."""
+    root = ET.fromstring(xml_content)
     cutoff = datetime.now(timezone.utc) - timedelta(hours=max(hours, 24) + 1)
     result = []
     for item in root.findall(".//item"):
@@ -132,7 +126,10 @@ def _fetch_google_news_rss(hours: int = 24, limit: int = 35) -> list[dict]:
             continue
 
         source_node = item.find("source")
-        source_name = (source_node.text or "").strip() if source_node is not None else ""
+        source_name = (
+            (source_node.text or "").strip()
+            if source_node is not None else ""
+        )
         source_url = source_node.get("url", "") if source_node is not None else ""
         source_domain = urlparse(source_url).netloc or source_name or "Google News"
         result.append({
@@ -145,7 +142,21 @@ def _fetch_google_news_rss(hours: int = 24, limit: int = 35) -> list[dict]:
         })
         if len(result) >= limit:
             break
+    return result
 
+
+def _fetch_google_news_rss(hours: int = 24, limit: int = 35) -> list[dict]:
+    """Backup headline index used when GDELT is rate-limited or empty."""
+    query = (
+        "(world OR politics OR business OR economy OR technology OR science "
+        "OR health OR climate OR sports OR conflict) when:1d"
+    )
+    response = _get_with_retries(
+        GOOGLE_NEWS_RSS_URL,
+        params={"q": query, "hl": "en-US", "gl": "US", "ceid": "US:en"},
+    )
+    response.raise_for_status()
+    result = _parse_google_news_rss(response.content, hours=hours, limit=limit)
     LOG.info("Google News RSS backup returned %s candidate headlines.", len(result))
     return result
 
