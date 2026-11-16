@@ -39,5 +39,8 @@ jobs:
       - name: Run offline news fallback tests
         run: python tests/news_fetcher_test.py
 
+      - name: Run offline Gemini retry tests
+        run: python tests/gemini_retry_test.py
+
       - name: Run offline renderer smoke test
         run: python tests/smoke_test.py
