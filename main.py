@@ -38,8 +38,12 @@ def main() -> int:
     candidates = get_candidate_articles(max_candidates=18)
     LOG.info("Extracted %s full-text articles.", len(candidates))
     if len(candidates) < 4:
-        LOG.warning("Not enough full-text sources. Skipping this run rather than guessing.")
-        return 0
+        LOG.error(
+            "Only %s usable publisher sources were available; at least 4 are required. "
+            "No images were generated and this workflow will be marked as failed.",
+            len(candidates),
+        )
+        return 2
 
     brief = create_news_brief(candidates, slot, date_label)
     assets = generate_assets(brief, str(output_dir))
