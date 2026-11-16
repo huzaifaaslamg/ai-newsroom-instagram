@@ -14,14 +14,15 @@ class TemporaryServerError(Exception):
 
 
 class FakeModels:
-    def __init__(self, failures):
+    def __init__(self, failures, error_factory=None):
         self.failures = failures
+        self.error_factory = error_factory or (lambda: TemporaryServerError(503))
         self.calls = 0
 
     def generate_content(self, **kwargs):
         self.calls += 1
         if self.calls <= self.failures:
-            raise TemporaryServerError(503)
+            raise self.error_factory()
         return "generated"
 
 
@@ -44,11 +45,14 @@ def test_retries_503_and_then_succeeds():
 
 
 def test_non_transient_error_is_not_retried():
-    models = FakeModels(failures=1)
-    client = FakeClient(models)
-
     class BadRequestError(Exception):
         code = 400
+
+    models = FakeModels(
+        failures=1,
+        error_factory=lambda: BadRequestError("HTTP 400"),
+    )
+    client = FakeClient(models)
 
     with patch.object(gemini_writer, "APIError", BadRequestError):
         with patch.object(gemini_writer.time, "sleep") as sleep:
