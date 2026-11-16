@@ -106,63 +106,110 @@ def _rss_description(value: str | None) -> str:
     return re.sub(r"\s+", " ", plain).strip()
 
 
-def _parse_google_news_rss(
+PUBLISHER_RSS_FEEDS = [
+    ("BBC News", "https://feeds.bbci.co.uk/news/rss.xml"),
+    ("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
+    ("BBC Business", "https://feeds.bbci.co.uk/news/business/rss.xml"),
+    ("BBC Technology", "https://feeds.bbci.co.uk/news/technology/rss.xml"),
+    ("BBC Science", "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"),
+    ("Al Jazeera English", "https://www.aljazeera.com/xml/rss/all.xml"),
+    ("The Guardian World", "https://www.theguardian.com/world/rss"),
+    ("The Guardian Business", "https://www.theguardian.com/business/rss"),
+]
+
+
+def _parse_publisher_rss(
     xml_content: bytes,
+    feed_name: str,
     hours: int = 24,
     limit: int = 35,
 ) -> list[dict]:
-    """Parse Google News RSS XML into the common article-index format."""
+    """Parse direct publisher RSS feeds with real article URLs and summaries."""
     root = ET.fromstring(xml_content)
     cutoff = datetime.now(timezone.utc) - timedelta(hours=max(hours, 24) + 1)
     result = []
+
     for item in root.findall(".//item"):
         title = (item.findtext("title") or "").strip()
         url = (item.findtext("link") or "").strip()
-        if not title or not url.startswith("https://"):
+        if not title or not url.startswith(("https://", "http://")):
             continue
 
         published = _parse_rss_date(item.findtext("pubDate"))
         if published and published < cutoff:
             continue
 
+        description = item.findtext("description")
+        # Some publishers put their summary in content:encoded rather than
+        # description. Read it by local tag name to avoid namespace assumptions.
+        if not description:
+            for child in item:
+                if child.tag.rsplit("}", 1)[-1] == "encoded" and child.text:
+                    description = child.text
+                    break
+
         source_node = item.find("source")
         source_name = (
             (source_node.text or "").strip()
             if source_node is not None else ""
         )
-        source_url = source_node.get("url", "") if source_node is not None else ""
-        source_domain = urlparse(source_url).netloc or source_name or "Google News"
+        domain = urlparse(url).netloc
         result.append({
             "title": title[:300],
             "url": url,
             "date": published.isoformat() if published else "",
-            "domain": source_domain,
+            "domain": domain,
+            "publisher": source_name or feed_name,
             "source_country": "",
-            "description": _rss_description(item.findtext("description")),
+            "description": _rss_description(description),
         })
         if len(result) >= limit:
             break
+
     return result
 
 
-def _fetch_google_news_rss(hours: int = 24, limit: int = 35) -> list[dict]:
-    """Backup headline index used when GDELT is rate-limited or empty."""
-    query = (
-        "(world OR politics OR business OR economy OR technology OR science "
-        "OR health OR climate OR sports OR conflict) when:1d"
-    )
-    response = _get_with_retries(
-        GOOGLE_NEWS_RSS_URL,
-        params={"q": query, "hl": "en-US", "gl": "US", "ceid": "US:en"},
-    )
-    response.raise_for_status()
-    result = _parse_google_news_rss(response.content, hours=hours, limit=limit)
-    LOG.info("Google News RSS backup returned %s candidate headlines.", len(result))
-    return result
+def _fetch_publisher_rss(hours: int = 24, limit: int = 35) -> list[dict]:
+    """Fetch a small set of direct publisher feeds as the GDELT backup."""
+    articles = []
+    per_feed = max(5, min(12, (limit + len(PUBLISHER_RSS_FEEDS) - 1) // len(PUBLISHER_RSS_FEEDS)))
+    for feed_name, feed_url in PUBLISHER_RSS_FEEDS:
+        try:
+            response = _get_with_retries(feed_url, retry_delays=(3,))
+            response.raise_for_status()
+            items = _parse_publisher_rss(
+                response.content,
+                feed_name=feed_name,
+                hours=hours,
+                limit=per_feed,
+            )
+            LOG.info("%s RSS returned %s usable items.", feed_name, len(items))
+            articles.extend(items)
+        except (requests.RequestException, ET.ParseError, ValueError) as exc:
+            LOG.warning("%s RSS feed unavailable: %s", feed_name, exc)
+        if len(articles) >= limit:
+            break
+
+    # Newest first, with URL deduplication across overlapping publisher feeds.
+    articles.sort(key=lambda item: item.get("date", ""), reverse=True)
+    seen_urls, seen_titles, unique = set(), set(), []
+    for item in articles:
+        url_key = item["url"].split("#", 1)[0].rstrip("/")
+        title_key = _clean_title(item["title"])
+        if url_key in seen_urls or title_key in seen_titles:
+            continue
+        seen_urls.add(url_key)
+        seen_titles.add(title_key)
+        unique.append(item)
+        if len(unique) >= limit:
+            break
+
+    LOG.info("Publisher RSS backup returned %s unique headlines.", len(unique))
+    return unique
 
 
 def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
-    """Use GDELT once, then fall back to Google News RSS if it is unavailable."""
+    """Use GDELT once, then fall back to direct publisher RSS feeds."""
     params = {
         "query": (
             "sourcelang:english (world OR politics OR business OR economy "
@@ -177,24 +224,25 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
 
     articles = []
     try:
-        # The DOC endpoint can enforce strict rate limits. Do not hammer it with
-        # multiple retries; switch to the RSS backup immediately on HTTP 429.
-        response = _get_with_retries(
-            GDELT_URL, params=params, retry_delays=()
-        )
+        # GDELT has recently rate-limited the shared GitHub Actions runner.
+        # Make one request only, then use publisher-owned RSS feeds.
+        response = _get_with_retries(GDELT_URL, params=params, retry_delays=())
         response.raise_for_status()
         payload = response.json()
         found = payload.get("articles", []) if isinstance(payload, dict) else []
         articles = found if isinstance(found, list) else []
         LOG.info("GDELT article index returned %s items.", len(articles))
     except (requests.RequestException, ValueError) as exc:
-        LOG.warning("GDELT news index unavailable (%s); switching to RSS backup.", exc)
+        LOG.warning(
+            "GDELT news index unavailable (%s); switching to publisher RSS backup.",
+            exc,
+        )
 
     if not articles:
         try:
-            articles = _fetch_google_news_rss(hours=max(hours, 24), limit=limit)
+            articles = _fetch_publisher_rss(hours=max(hours, 24), limit=limit)
         except (requests.RequestException, ET.ParseError, ValueError) as exc:
-            LOG.error("Google News RSS backup is unavailable: %s", exc)
+            LOG.error("Publisher RSS backup is unavailable: %s", exc)
             return []
 
     cutoff = datetime.now(timezone.utc) - timedelta(hours=max(hours, 24) + 1)
@@ -202,7 +250,7 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
     for article in articles:
         url = (article.get("url") or "").strip()
         title = (article.get("title") or "").strip()
-        if not url.startswith("https://") or not title:
+        if not url.startswith(("https://", "http://")) or not title:
             continue
 
         parsed = urlparse(url)
@@ -223,6 +271,7 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
             "url": url,
             "date": published.isoformat() if published else "",
             "domain": article.get("domain") or parsed.netloc,
+            "publisher": article.get("publisher") or article.get("domain") or parsed.netloc,
             "source_country": article.get("sourcecountry") or "",
             "description": article.get("description", ""),
         })
@@ -253,14 +302,14 @@ def get_candidate_articles(max_candidates: int = 18) -> list[dict]:
             break
         try:
             article_text = extract_article_text(item["url"])
-            # If a publisher blocks article extraction, a substantial RSS excerpt
-            # may be used, but a headline alone is never enough.
+            # Publisher-owned RSS descriptions are legitimate short summaries.
+            # Keep a minimum size so that headlines alone never reach Gemini.
             if len(article_text) < 500:
                 excerpt = item.get("description", "")
-                if len(excerpt) >= 250:
+                if len(excerpt) >= 120:
                     article_text = (
-                        "[Publisher RSS excerpt; full article text unavailable] "
-                        + excerpt
+                        "[Publisher-provided RSS summary; full article text "
+                        "was not available] " + excerpt
                     )
                 else:
                     LOG.info("Skipping page with insufficient text: %s", item["url"])
