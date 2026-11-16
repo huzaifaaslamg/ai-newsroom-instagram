@@ -10,8 +10,44 @@ LOG = logging.getLogger(__name__)
 GDELT_URL = "https://api.gdeltproject.org/api/v2/doc/doc"
 USER_AGENT = "Mozilla/5.0 (compatible; AI-Newsroom/1.0; +https://github.com/huzaifaaslamg/ai-newsroom-instagram)"
 TIMEOUT = 18
+RETRY_DELAYS = (4, 10, 20)
 
-def _clean_title(value: str) -> str:
+def _get_with_retries(url: str, *, params: dict | None = None,
+                      allow_redirects: bool = True) -> requests.Response:
+    """Retry temporary rate-limit and upstream errors with bounded backoff."""
+    for attempt in range(len(RETRY_DELAYS) + 1):
+        try:
+            response = requests.get(
+                url, params=params, headers={"User-Agent": USER_AGENT},
+                timeout=TIMEOUT, allow_redirects=allow_redirects,
+            )
+        except requests.RequestException:
+            if attempt >= len(RETRY_DELAYS):
+                raise
+            delay = RETRY_DELAYS[attempt]
+            LOG.warning("News source connection error; retrying in %ss.", delay)
+            time.sleep(delay)
+            continue
+
+        if response.status_code not in (429, 500, 502, 503, 504):
+            return response
+        if attempt >= len(RETRY_DELAYS):
+            response.raise_for_status()
+
+        retry_after = response.headers.get("Retry-After", "")
+        try:
+            delay = min(30, max(1, int(retry_after)))
+        except (TypeError, ValueError):
+            delay = RETRY_DELAYS[attempt]
+        LOG.warning(
+            "News source returned HTTP %s; retrying in %ss (attempt %s/%s).",
+            response.status_code, delay, attempt + 1, len(RETRY_DELAYS),
+        )
+        time.sleep(delay)
+
+    raise RuntimeError("News source retry loop ended unexpectedly.")
+
+def _clean_title(value: str):
     return re.sub(r"[^a-z0-9 ]", "", re.sub(r"\s+", " ", value or "").strip().lower())
 
 def _parse_date(value: str | None):
@@ -28,8 +64,7 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
         "mode": "ArtList", "format": "json", "sort": "DateDesc",
         "maxrecords": min(max(limit, 10), 250), "timespan": f"{hours}h",
     }
-    response = requests.get(GDELT_URL, params=params,
-                            headers={"User-Agent": USER_AGENT}, timeout=TIMEOUT)
+    response = _get_with_retries(GDELT_URL, params=params)
     response.raise_for_status()
     articles = response.json().get("articles", [])
     cutoff = datetime.now(timezone.utc) - timedelta(hours=hours + 1)
@@ -58,8 +93,7 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
     return result
 
 def extract_article_text(url: str) -> str:
-    response = requests.get(url, headers={"User-Agent": USER_AGENT},
-                            timeout=TIMEOUT, allow_redirects=True)
+    response = _get_with_retries(url, allow_redirects=True)
     response.raise_for_status()
     if "text/html" not in response.headers.get("content-type", "").lower():
         return ""
