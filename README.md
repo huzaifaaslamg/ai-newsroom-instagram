@@ -10,8 +10,9 @@ That produces **four feed posts per day** when Instagram publishing is enabled.
 
 ## How it works
 
-- **GDELT DOC API** discovers recent news articles.
-- **Trafilatura** extracts article text from publisher pages.
+- **GDELT DOC API** discovers recent news articles when available.
+- If GDELT is rate-limited, **direct publisher RSS feeds** (BBC News sections, Al Jazeera English, and The Guardian sections) provide backup headlines, summaries, and publisher article links.
+- **Trafilatura** extracts article text from publisher pages; a sufficiently detailed publisher-provided RSS summary is used only when the full page cannot be extracted.
 - **Gemini API** selects and summarises stories in English and Urdu.
 - **Pillow** creates 1080 × 1350 JPEG cards. Graphics are rendered from text and shapes rather than generating synthetic photographs of real news events.
 - **GitHub Actions** schedules the twice-daily runs.
@@ -114,7 +115,7 @@ Each run publishes two posts when auto-publishing is enabled. GitHub may delay s
 
 ## Safety and editorial safeguards
 
-- At least four full-text articles are required before generating a post.
+- At least four usable publisher sources are required before generating a post. These can be full article text or sufficiently detailed summaries from direct publisher RSS feeds; headlines alone are never used.
 - The model is instructed to use supplied article text only and not invent sources, quotes, or statistics.
 - Sensitive or disputed claims should be included only when separate supplied publishers corroborate them.
 - Source domains appear on the source slide; source URLs are included in captions.
@@ -125,7 +126,7 @@ Each run publishes two posts when auto-publishing is enabled. GitHub may delay s
 ## Project files
 
 - main.py — run orchestration and manifest generation.
-- news_fetcher.py — GDELN discovery and publisher article extraction.
+- news_fetcher.py — GDELT discovery, direct publisher RSS fallback, and article extraction.
 - gemini_writer.py — bilingual summarisation, story validation and captions.
 - image_generator.py — local 4:5 editorial image rendering.
 - publish.py — Instagram image/carousel publishing and duplicate protection.
