@@ -1,10 +1,42 @@
 """Create source-grounded bilingual news copy with the Gemini API."""
 from __future__ import annotations
 import json
+import logging
 import os
 import re
+import time
 from google import genai
 from google.genai import types
+from google.genai.errors import APIError
+
+LOG = logging.getLogger(__name__)
+GEMINI_RETRY_DELAYS = (8, 20, 40)
+
+
+def _generate_with_retries(client, *, model: str, contents: str, config):
+    """Retry temporary Gemini server overloads with exponential backoff."""
+    for attempt in range(len(GEMINI_RETRY_DELAYS) + 1):
+        try:
+            return client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config,
+            )
+        except APIError as exc:
+            status_code = getattr(exc, "code", None)
+            if status_code not in (500, 502, 503, 504):
+                raise
+            if attempt >= len(GEMINI_RETRY_DELAYS):
+                raise
+            delay = GEMINI_RETRY_DELAYS[attempt]
+            LOG.warning(
+                "Gemini returned HTTP %s; retrying in %ss (attempt %s/%s).",
+                status_code,
+                delay,
+                attempt + 1,
+                len(GEMINI_RETRY_DELAYS),
+            )
+            time.sleep(delay)
 
 def _extract_json(text: str) -> dict:
     value = (text or "").strip()
@@ -79,8 +111,10 @@ these are literally all the world's news.
 Reporting supplied:
 {json.dumps(source_pack, ensure_ascii=False)}
 """
-    response = client.models.generate_content(
-        model=model, contents=prompt,
+    response = _generate_with_retries(
+        client,
+        model=model,
+        contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json", temperature=0.25
         ),
