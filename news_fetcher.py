@@ -59,17 +59,39 @@ def _parse_date(value: str | None):
         return None
 
 def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
-    params = {
-        "query": "sourcelang:english (world OR politics OR business OR economy OR technology OR science OR health OR climate OR sports OR conflict)",
-        "mode": "ArtList", "format": "json", "sort": "DateDesc",
-        "maxrecords": min(max(limit, 10), 250), "timespan": f"{hours}h",
-    }
-    response = _get_with_retries(GDELT_URL, params=params)
-    response.raise_for_status()
-    articles = response.json().get("articles", [])
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours + 1)
+    """Fetch a fresh article index, trying broader searches if the first is empty."""
+    base_terms = "(world OR politics OR business OR economy OR technology OR science OR health OR climate OR sports OR conflict)"
+    searches = [
+        (f"sourcelang:english {base_terms}", hours),
+        (f"sourcelang:english {base_terms}", max(hours, 24)),
+        (base_terms, max(hours, 24)),
+    ]
+
+    articles = []
+    for search_number, (query, search_hours) in enumerate(searches, start=1):
+        params = {
+            "query": query,
+            "mode": "ArtList",
+            "format": "json",
+            "sort": "DateDesc",
+            "maxrecords": min(max(limit, 10), 250),
+            "timespan": f"{search_hours}h",
+        }
+        response = _get_with_retries(GDELT_URL, params=params)
+        response.raise_for_status()
+        payload = response.json()
+        found = payload.get("articles", []) if isinstance(payload, dict) else []
+        articles = found if isinstance(found, list) else []
+        LOG.info(
+            "News index search %s/%s returned %s items (window=%sh).",
+            search_number, len(searches), len(articles), search_hours,
+        )
+        if articles:
+            break
+
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=max(hours, 24) + 1)
     seen_urls, seen_titles, result = set(), set(), []
-    for article in articles if isinstance(articles, list) else []:
+    for article in articles:
         url = (article.get("url") or "").strip()
         title = (article.get("title") or "").strip()
         if not url.startswith("https://") or not title:
@@ -90,6 +112,7 @@ def fetch_recent_article_index(hours: int = 12, limit: int = 35) -> list[dict]:
             "domain": article.get("domain") or parsed.netloc,
             "source_country": article.get("sourcecountry") or "",
         })
+    LOG.info("News index yielded %s unique usable URLs.", len(result))
     return result
 
 def extract_article_text(url: str) -> str:
