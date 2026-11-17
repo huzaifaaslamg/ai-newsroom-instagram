@@ -1,0 +1,136 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-17",
+  "slot": "evening",
+  "run_id": "20261117-evening",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-17T16:42:30.432176+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Ukrainian strike causes partial collapse of Crimean Bridge",
+      "headline_ur": "یوکرینی حملے میں کریمیا کا اہم پل جزوی طور پر تباہ",
+      "summary_en": "Ukraine launched an overnight strike that caused a section of the Crimean Bridge to collapse into the water, damaging road infrastructure. Russian officials acknowledged the structural damage and announced that the bridge would be restored.",
+      "summary_ur": "یوکرین نے رات گئے کارروائی کر کے کریمیا کے پل کو نقصان پہنچایا جس کے باعث سڑک کا ایک حصہ پانی میں گر گیا۔ روسی حکام نے پل کو پہنچنے والے ساختی نقصان کی تصدیق کی اور اسے دوبارہ تعمیر کرنے کا اعلان کیا۔",
+      "why_en": "The bridge serves as a critical transport and supply corridor for Russian military logistics into occupied Crimea, and its closure escalates regional transport vulnerabilities.",
+      "why_ur": "یہ پل کریمیا کے لیے روسی فوج کی رسد اور نقل و حمل کا ایک بنیادی راستہ ہے، اور اس کا متاثر ہونا لاجسٹک مشکلات میں اضافہ کرتا ہے۔",
+      "sources": [
+        {
+          "title": "Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+          "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "TECHNOLOGY",
+      "headline_en": "US tightens AI chip export controls across Southeast Asia and Brazil",
+      "headline_ur": "امریکا نے مصنوعی ذہانت کی جدید چپس پر نئی برآمدی پابندیاں عائد کر دیں",
+      "summary_en": "The United States announced new rules to increase scrutiny on data centers in Brazil and four Southeast Asian nations to prevent advanced AI computing power reaching China. US authorities also confirmed a criminal investigation into Singapore-based tech firm Megaspeed for suspected export violations.",
+      "summary_ur": "امریکی حکومت نے چین تک جدید ٹیکنالوجی کی رسائی روکنے کے لیے جنوب مشرقی ایشیا اور برازیل کے ڈیٹا سینٹرز پر نئی برآمدی پابندیاں عائد کر دی ہیں۔ حکام نے برآمدی قوانین کی مبینہ خلاف ورزی پر سنگاپور کی فرم میگاسپیڈ کے خلاف تحقیقات کی بھی تصدیق کی ہے۔",
+      "why_en": "Chinese firms rely heavily on rented overseas computing capacity to build artificial intelligence models, making third-country data hubs a key focus of US tech regulations.",
+      "why_ur": "چینی کمپنیاں مصنوعی ذہانت کے ماڈلز کی تربیت کے لیے بیرون ملک ڈیٹا سینٹرز کی کمپیوٹنگ صلاحیت پر انحصار کرتی ہیں، جس کی وجہ سے یہ پابندیاں دونوں ممالک کے درمیان تکنیکی مسابقت کو متاثر کرتی ہیں۔",
+      "sources": [
+        {
+          "title": "How new US chip restrictions on South East Asia will hit China",
+          "url": "https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "US government confirms investigation into tech firm Megaspeed",
+          "url": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Five European countries announce plan to transfer rejected asylum seekers to Rwanda",
+      "headline_ur": "پانچ یورپی ممالک کا مسترد تارکین وطن کو روانڈا بھیجنے کا منصوبہ",
+      "summary_en": "Austria, Denmark, Germany, Greece, and the Netherlands revealed plans to set up a return hub in Rwanda to receive people with enforceable deportation orders by 2027. Human rights organizations warned that transferring deportees to third countries could expose vulnerable individuals to harm.",
+      "summary_ur": "آسٹریا، ڈنمارک، جرمنی، یونان اور نیدرلینڈز نے 2027 تک مسترد شدہ پناہ گزینوں کو روانڈا کے مجوزہ مرکز منتقل کرنے کے منصوبے کا اعلان کیا ہے۔ انسانی حقوق کی تنظیموں نے خبردار کیا ہے کہ تیسرے ممالک میں ایسی منتقلی سے افراد کے حقوق متاثر ہو سکتے ہیں۔",
+      "why_en": "European governments are pursuing third-country hubs as European officials report that roughly 90 percent of rejected asylum applicants currently remain within the EU.",
+      "why_ur": "یورپی ممالک ملک بدری کے عمل کو مؤثر بنانے کے لیے یہ قدم اٹھا رہے ہیں کیونکہ اعداد و شمار کے مطابق مسترد ہونے والے تقریباً 90 فیصد پناہ گزین فی الوقت یورپی یونین میں ہی مقیم ہیں۔",
+      "sources": [
+        {
+          "title": "Why are five EU countries reviving plans to deport migrants to Rwanda?",
+          "url": "https://www.aljazeera.com/news/2026/11/17/why-are-five-eu-countries-reviving-plans-to-deport-migrants-to-rwanda?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "Clashes break out in Bangladesh as garment workers protest over wages",
+      "headline_ur": "بنگلہ دیش میں اجرتوں کے تنازع پر گارمنٹس مزدوروں کے مظاہرے اور جھڑپیں",
+      "summary_en": "Bangladeshi police deployed tear gas and stun grenades against thousands of garment workers protesting after a scheduled wage negotiation meeting was postponed. The wage dispute has led to the shutdown of roughly 500 manufacturing facilities across the country.",
+      "summary_ur": "بنگلہ دیش میں تنخواہوں پر مذاکراتی اجلاس ملتوی ہونے کے بعد مظاہرہ کرنے والے ہزاروں گارمنٹس مزدوروں پر پولیس نے آنسو گیس اور اسٹن گرنیڈز کا استعمال کیا۔ تنخواہوں کے اس تنازع کے باعث ملک بھر میں تقریباً 500 کارخانے بند ہو چکے ہیں۔",
+      "why_en": "Bangladesh is the world's second-largest clothing exporter, and prolonged work stoppages threaten an industry employing over four million people and generating 38 billion dollars annually.",
+      "why_ur": "بنگلہ دیش ملبوسات کی برآمد میں دنیا کا دوسرا بڑا ملک ہے، اور فیکٹریوں کی بندش سے چار ملین سے زائد ملازمین اور 38 ارب ڈالر کی سالانہ صنعت براہِ راست متاثر ہو رہی ہے۔",
+      "sources": [
+        {
+          "title": "Bangladesh police clash with garment workers amid protests over wages",
+          "url": "https://www.aljazeera.com/news/2026/11/17/bangladesh-garment-workers-clash-with-police-in-fresh-protests-over-wages?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Hundreds arrested in Manila during protests against Trump and AI pact",
+      "headline_ur": "منیلا میں امریکی صدر ٹرمپ کی آمد اور ٹیکنالوجی معاہدے پر مظاہرے",
+      "summary_en": "Police in the Philippines arrested nearly 300 demonstrators during protests over economic costs and a planned technology corridor known as Pax Silica. The demonstrations coincided with US President Donald Trump's arrival in Manila for the ASEAN summit.",
+      "summary_ur": "فلپائن کے دارالحکومت منیلا میں معاشی مسائل اور نئے ٹیکنالوجی منصوبے 'پیکس سلیکا' کے خلاف ہونے والے مظاہروں کے دوران پولیس نے تقریباً 300 افراد کو حراست میں لے لیا۔ یہ مظاہرے امریکی صدر ڈونلڈ ٹرمپ کی آسیان سربراہی اجلاس میں شرکت کے لیے آمد کے موقع پر ہوئے۔",
+      "why_en": "The unrest highlights regional friction regarding inflation tied to geopolitical tensions and environmental concerns surrounding critical mineral and tech infrastructure deals.",
+      "why_ur": "یہ مظاہرے خطے میں مہنگائی کے اثرات اور معدنیات و مصنوعی ذہانت کے بین الاقوامی منصوبوں پر مقامی تحفظات کی نشاندہی کرتے ہیں۔",
+      "sources": [
+        {
+          "title": "Hundreds arrested in anti-Trump protests in Philippines amid anger over Iran war and AI pact",
+          "url": "https://www.theguardian.com/world/2026/nov/17/hundreds-arrested-manila-anti-trump-protests-philippines",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        },
+        {
+          "title": "Hi-tech Shenzhen takes centre stage as Xi sends ‘Chinamaxxing’ message at Apec summit",
+          "url": "https://www.theguardian.com/world/2026/nov/17/hi-tech-shenzhen-chinamaxxing-xi-apec-summit",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261117-evening/carousel_01.jpg",
+        "published/20261117-evening/carousel_02.jpg",
+        "published/20261117-evening/carousel_03.jpg",
+        "published/20261117-evening/carousel_04.jpg",
+        "published/20261117-evening/carousel_05.jpg",
+        "published/20261117-evening/carousel_06.jpg",
+        "published/20261117-evening/carousel_07.jpg"
+      ],
+      "caption": "Our briefing covers major developments: Ukraine strikes the Crimean Bridge, the US expands chip export rules, five EU nations plan deportations to Rwanda, and protests erupt in Asia. What are your perspectives on these events?\n\nہماری شام کی بریفنگ میں کریمیا کے پل پر حملہ، امریکی چپ برآمدی قوانین میں سختی، پناہ گزینوں سے متعلق یورپی منصوبہ، اور ایشیا میں مظاہرے شامل ہیں۔ ان امور پر آپ کی کیا رائے ہے؟\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/why-are-five-eu-countries-reviving-plans-to-deport-migrants-to-rwanda?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/bangladesh-garment-workers-clash-with-police-in-fresh-protests-over-wages?traffic_source=rss\n\n#WorldNews #Crimea #Technology #GlobalEconomy #Bangladesh #Diplomacy #Europe #NewsBrief",
+      "alt_text": "Bilingual global news carousel with headlines and summaries in English and Urdu."
+    },
+    "single": {
+      "file": "published/20261117-evening/single_headline.jpg",
+      "caption": "Stay informed with key global updates covering diplomatic summits, trade and tech supply chains, and security developments from 17 November 2026.\n\n17 نومبر 2026 کے اہم سفارتی، معاشی، تجارتی اور سلامتی سے متعلق عالمی واقعات کا باخبر جائزہ لیں۔\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/why-are-five-eu-countries-reviving-plans-to-deport-migrants-to-rwanda?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/bangladesh-garment-workers-clash-with-police-in-fresh-protests-over-wages?traffic_source=rss\n\n#WorldNews #Crimea #Technology #GlobalEconomy #Bangladesh #Diplomacy #Europe #NewsBrief",
+      "alt_text": "English and Urdu news graphic: Ukrainian strike causes partial collapse of Crimean Bridge"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
