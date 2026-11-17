@@ -1,0 +1,143 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-18",
+  "slot": "morning",
+  "run_id": "20261118-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-18T03:52:16.281803+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "US Soldier Arrested in UK Over Spying Handed to American Custody",
+      "headline_ur": "برطانیہ میں جاسوسی کے شبہے میں گرفتار امریکی فوجی امریکی تحویل میں منتقل",
+      "summary_en": "A senior US Army officer arrested in Britain on suspicion of spying for Russia has been transferred to US military custody. British counter-terrorism police said the investigation was handed over to American partners under existing international protocols.",
+      "summary_ur": "روس کے لیے جاسوسی کے شبہے میں برطانیہ میں گرفتار ایک سینیئر امریکی فوجی افسر کو امریکی فوج کی تحویل میں دے دیا گیا ہے۔ برطانوی انسدادِ دہشت گردی پولیس کے مطابق تحقیقات بین الاقوامی ضوابط کے تحت امریکی حکام کے سپرد کی گئی ہیں۔",
+      "why_en": "The transfer ensures the officer will face proceedings under the US Uniform Code of Military Justice rather than standing trial in the UK.",
+      "why_ur": "اس منتقلی کے بعد ملزم افسر کے خلاف برطانیہ کے بجائے امریکی فوجی قوانین کے تحت قانونی کارروائی عمل میں لائی جائے گی۔",
+      "sources": [
+        {
+          "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+          "url": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "UK hands NATO-assigned US soldier accused of Russia spying to US military",
+          "url": "https://www.aljazeera.com/news/2026/11/17/uk-hands-nato-assigned-us-soldier-accused-of-russia-spying-to-us-military?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Russian Military Transport Plane Crashes in Siberia, Killing All 19 Aboard",
+      "headline_ur": "سائبیریا میں روسی فوجی طیارہ گر کر تباہ، سوار تمام 19 افراد ہلاک",
+      "summary_en": "An Antonov An-12 military transport aircraft crashed in an uninhabited area of Siberia's Kemerovo region, killing all 19 people on board. Russia's Defence Ministry indicated that preliminary findings point to a technical equipment malfunction.",
+      "summary_ur": "مغربی سائبیریا کے کیمیروو خطے کے غیر آباد علاقے میں انٹونوف این-12 فوجی ٹرانسپورٹ طیارہ گر کر تباہ ہو گیا جس سے تمام 19 افراد ہلاک ہو گئے۔ روسی وزارتِ دفاع نے ابتدائی تحقیقات میں فنی خرابی کو حادثے کی وجہ قرار دیا ہے۔",
+      "why_en": "Aviation authorities have launched a formal safety inquiry into the Soviet-designed transport plane, which remains a key logistics workhorse for the Russian armed forces.",
+      "why_ur": "ہوا بازی کے حکام نے سوویت دور کے اس ٹرانسپورٹ طیارے کی پرواز کے حفاظتی ضوابط کی تحقیقات شروع کر دی ہیں، جو روسی فوج کے لیے نقل و حمل کا اہم ذریعہ ہے۔",
+      "sources": [
+        {
+          "title": "Russian military plane crash in Siberia kills 19",
+          "url": "https://www.aljazeera.com/news/2026/11/17/russian-military-plane-crash-in-siberia-kills-19?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        },
+        {
+          "title": "Russian military plane crashes, killing all 19 on board",
+          "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "Nvidia Doubled Quarterly Revenue to $115bn, Rejects Ousted Founder's Return",
+      "headline_ur": "اینویڈیا کی سہ ماہی آمدنی دگنی، معزول بانی کی واپسی بورڈ نے مسترد کر دی",
+      "summary_en": "Nvidia reported quarterly revenue doubled to $115.8bn and profits reached $65bn, powered by strong demand for data center technology. The company's board also confirmed it will not reinstate ousted founder Jensen Huang following his departure over personal misconduct.",
+      "summary_ur": "ڈیٹا سینٹرز کی مانگ میں اضافے کے باعث اینویڈیا کی سہ ماہی آمدنی دوگنی ہو کر 115.8 ارب ڈالر اور منافع 65 ارب ڈالر تک پہنچ گیا۔ کمپنی کے بورڈ نے یہ بھی واضح کیا کہ وہ مستعفی ہونے والے بانی جینسن ہوانگ کو واپس نہیں لائے گا۔",
+      "why_en": "The results ease short-term investor concerns about slowing artificial intelligence spending, though questions remain over Nvidia's strategic trajectory without its longtime leader.",
+      "why_ur": "ان مالی نتائج سے مصنوعی ذہانت کے شعبے میں سرمایہ کاری کم ہونے کے خدشات وقتی طور پر دور ہو گئے ہیں، البتہ بانی کے بغیر کمپنی کی آئندہ حکمت عملی پر سوالات برقرار ہیں۔",
+      "sources": [
+        {
+          "title": "Nvidia reports bumper results as firm says it not reinstating Huang",
+          "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "Jensen Huang says he would be 'honoured' to return as Nvidia CEO if board asked him",
+          "url": "https://www.bbc.co.uk/news/articles/cwx2en2vrxmdo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ECONOMY",
+      "headline_en": "St Kitts and Nevis Ends Cash-for-Passports Scheme Following EU Warnings",
+      "headline_ur": "یورپی یونین کے دباؤ پر سینٹ کٹس اینڈ نیوس کا سرمایہ کاری شہریت پروگرام ختم",
+      "summary_en": "St Kitts and Nevis will phase out its 42-year-old citizenship-by-investment programme after the European Union threatened to terminate visa-free travel for its passport holders. Local leaders warned the decision risks significant economic disruption, as the scheme historically generated major state revenues.",
+      "summary_ur": "یورپی یونین کی جانب سے شینگن ویزا فری سہولت ختم کرنے کی تنبیہ کے بعد سینٹ کٹس اینڈ نیوس نے اپنا 42 سالہ شہریت برائے سرمایہ کاری پروگرام ختم کرنے کا اعلان کر دیا ہے۔ مقامی رہنماؤں نے خبردار کیا ہے کہ اس سے ملکی معیشت اور فلاحی خدمات کو شدید مالی دھچکا لگ سکتا ہے۔",
+      "why_en": "The government is now forced to transition towards tourism and geothermal energy to offset the loss of foreign capital that financed public infrastructure, health, and education.",
+      "why_ur": "حکومت کو اب بنیادی ڈھانچے، صحت اور تعلیم کے شعبوں کے مالی تسلسل کے لیے سیاحت اور متبادل توانائی کے ذریعے نئے معاشی ذرائع تلاش کرنا ہوں گے۔",
+      "sources": [
+        {
+          "title": "Caribbean nations fear economic impact of shuttering citizenship program after EU threats",
+          "url": "https://www.theguardian.com/world/2026/nov/17/st-kitts-nevis-citizenship-investment",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ENVIRONMENT",
+      "headline_en": "Earthshot Prize Awards £1m to Five Global Environmental Pioneers in Mumbai",
+      "headline_ur": "ممبئی میں ارتھ شاٹ پرائز کی تقریب، پانچ ماحولیاتی منصوبوں کے لیے انعامات کا اعلان",
+      "summary_en": "The sixth annual Earthshot Prize awarded £1 million each to five innovative sustainability projects during a ceremony held in Mumbai, India. Winners included Bhutan for national water protection and an Indian initiative deploying one million electric rickshaws.",
+      "summary_ur": "بھارت کے شہر ممبئی میں منعقدہ چھٹی سالانہ ارتھ شاٹ پرائز تقریب میں پائیداری کے پانچ جدید منصوبوں کو فی کس دس لاکھ پاؤنڈ کے انعامات دیے گئے۔ جیتنے والوں میں بھوٹان کا آبی تحفظ کا منصوبہ اور بھارت میں دس لاکھ الیکٹرک رکشوں کی فراہمی شامل ہے۔",
+      "why_en": "The prizes provide direct commercial funding to scale up proven environmental solutions targeting clean air, marine conservation, emissions reduction, and habitat restoration.",
+      "why_ur": "یہ انعامات صاف ہوا، سمندری تحفظ، کاربن اخراج میں کمی اور قدرتی وسائل کی بحالی کے عملی ماڈلز کو بین الاقوامی سطح پر وسعت دینے کے لیے براہ راست فنڈز فراہم کرتے ہیں۔",
+      "sources": [
+        {
+          "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
+          "url": "https://www.bbc.co.uk/news/articles/cqlykve012d1o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261118-morning/carousel_01.jpg",
+        "published/20261118-morning/carousel_02.jpg",
+        "published/20261118-morning/carousel_03.jpg",
+        "published/20261118-morning/carousel_04.jpg",
+        "published/20261118-morning/carousel_05.jpg",
+        "published/20261118-morning/carousel_06.jpg",
+        "published/20261118-morning/carousel_07.jpg"
+      ],
+      "caption": "Today's morning briefing covers an espionage custody transfer, a Siberian military plane crash, Nvidia's bumper earnings, Caribbean passport reforms, and Earthshot environmental honours. What are your thoughts on these developments?\n\nآج کے بلیٹن میں جاسوسی کیس کی منتقلی، سائبیریا میں طیارہ حادثہ، اینویڈیا کے ریکارڈ نتائج، کیریبین شہریت اصلاحات اور ارتھ شاٹ انعامات شامل ہیں۔ ان پر اپنی رائے کا اظہار کیجیے۔\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/uk-hands-nato-assigned-us-soldier-accused-of-russia-spying-to-us-military?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/russian-military-plane-crash-in-siberia-kills-19?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Nvidia #EarthshotPrize #Aviation #GlobalEconomy #Security #Environment #DailyBrief",
+      "alt_text": "Bilingual global news carousel with headlines and summaries in English and Urdu."
+    },
+    "single": {
+      "file": "published/20261118-morning/single_headline.jpg",
+      "caption": "From major technology earnings and economic shifts in the Caribbean to aviation tragedies and global green initiatives, here is your morning news update. Join the discussion below.\n\nٹیکنالوجی اور معیشت کی خبروں سے لے کر ہوا بازی کے حادثات اور ماحولیاتی اقدامات تک، اہم عالمی خبروں کا خلاصہ۔ کمنٹس میں اپنی رائے کا اظہار کریں۔\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/uk-hands-nato-assigned-us-soldier-accused-of-russia-spying-to-us-military?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/17/russian-military-plane-crash-in-siberia-kills-19?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Nvidia #EarthshotPrize #Aviation #GlobalEconomy #Security #Environment #DailyBrief",
+      "alt_text": "English and Urdu news graphic: US Soldier Arrested in UK Over Spying Handed to American Custody"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
