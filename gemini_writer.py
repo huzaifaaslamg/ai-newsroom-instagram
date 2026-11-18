@@ -159,10 +159,10 @@ Reporting supplied:
         ]
         parts = [
             str(en).strip(),
-            "Sources:\\n" + "\\n".join(source_lines),
+            "Sources:\n" + "\n".join(source_lines),
             " ".join(hashtags),
         ]
-        return "\\n\\n".join(part for part in parts if part)[:2190]
+        return "\n\n".join(part for part in parts if part)[:2190]
 
     return {
         "date": local_date, "slot": slot, "stories": stories,
