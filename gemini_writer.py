@@ -1,4 +1,4 @@
-"""Create source-grounded bilingual news copy with the Gemini API."""
+"""Create source-grounded English-only news copy with the Gemini API."""
 from __future__ import annotations
 import json
 import logging
@@ -18,9 +18,7 @@ def _generate_with_retries(client, *, model: str, contents: str, config):
     for attempt in range(len(GEMINI_RETRY_DELAYS) + 1):
         try:
             return client.models.generate_content(
-                model=model,
-                contents=contents,
-                config=config,
+                model=model, contents=contents, config=config,
             )
         except APIError as exc:
             status_code = getattr(exc, "code", None)
@@ -31,12 +29,10 @@ def _generate_with_retries(client, *, model: str, contents: str, config):
             delay = GEMINI_RETRY_DELAYS[attempt]
             LOG.warning(
                 "Gemini returned HTTP %s; retrying in %ss (attempt %s/%s).",
-                status_code,
-                delay,
-                attempt + 1,
-                len(GEMINI_RETRY_DELAYS),
+                status_code, delay, attempt + 1, len(GEMINI_RETRY_DELAYS),
             )
             time.sleep(delay)
+
 
 def _extract_json(text: str) -> dict:
     value = (text or "").strip()
@@ -46,6 +42,7 @@ def _extract_json(text: str) -> dict:
     if start < 0 or end <= start:
         raise ValueError("Gemini did not return a JSON object.")
     return json.loads(value[start:end + 1])
+
 
 def _unique_sources(stories: list[dict]) -> list[dict]:
     sources, seen = [], set()
@@ -57,6 +54,7 @@ def _unique_sources(stories: list[dict]) -> list[dict]:
                     "title", "url", "date", "domain", "source_country"
                 )})
     return sources
+
 
 def create_news_brief(candidates: list[dict], slot: str, local_date: str) -> dict:
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
@@ -72,9 +70,15 @@ def create_news_brief(candidates: list[dict], slot: str, local_date: str) -> dic
 
     prompt = f"""
 You are the editorial desk of a careful independent global news briefing.
-Prepare the {slot.upper()} edition for {local_date}. The audience is international,
-including readers in Pakistan. Coverage is broad: world affairs, politics,
-business, economy, technology, science, health, climate, and sports.
+Prepare the {slot.upper()} edition for {local_date}. The audience is international.
+Coverage is broad: world affairs, politics, business, economy, technology, science,
+health, climate, and sports.
+
+LANGUAGE RULE: Write absolutely everything for readers in ENGLISH ONLY.
+Do not write Urdu, Arabic, Roman Urdu, or any other language. This applies to
+headlines, summaries, explanations, captions, labels, and hashtags. Use English
+even when a source is not in English; translate its verified information into
+clear, natural English.
 
 Use ONLY supplied article text. Do not use outside knowledge, invent figures or
 quotes, or add context unsupported by these articles. Do not state allegations as
@@ -87,34 +91,28 @@ subjects and publishers. Never invent a source.
 Select 5 distinct stories if possible (minimum 4), most important first. For each:
 candidate_id (a supplied primary ID); corroborating_candidate_ids (other supplied
 IDs independently supporting the same event); category; headline_en (under 13
-words); headline_ur (natural Urdu); summary_en and summary_ur (accurate plain
-language, 1-2 short sentences); why_en and why_ur (why it matters, only supported
-by supplied reporting).
+words); summary_en and why_en (accurate plain English, concise and supported).
 
 Return JSON only:
 {{
  "stories":[
   {{"candidate_id":"n01","corroborating_candidate_ids":[],"category":"WORLD",
-   "headline_en":"...","headline_ur":"...","summary_en":"...","summary_ur":"...",
-   "why_en":"...","why_ur":"..."}}
+   "headline_en":"...","summary_en":"...","why_en":"..."}}
  ],
- "carousel_caption_en":"...","carousel_caption_ur":"...",
- "single_caption_en":"...","single_caption_ur":"...",
+ "carousel_caption_en":"...","single_caption_en":"...",
  "hashtags":["#WorldNews","#NewsBrief"]
 }}
 
-Captions should be concise, useful, non-sensational, bilingual in their respective
-fields, and invite respectful discussion. Do not include source URLs; publishing
-code adds verified source links. Use at most 8 relevant hashtags. Never claim
-these are literally all the world's news.
+Captions must be concise, useful, English-only, non-sensational, and invite
+respectful discussion. Do not include source URLs; publishing code adds verified
+source links. Use at most 8 relevant English hashtags. Never claim these are
+literally all the world's news.
 
 Reporting supplied:
 {json.dumps(source_pack, ensure_ascii=False)}
 """
     response = _generate_with_retries(
-        client,
-        model=model,
-        contents=prompt,
+        client, model=model, contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json", temperature=0.25
         ),
@@ -135,11 +133,8 @@ Reporting supplied:
         stories.append({
             "category": str(item.get("category", "WORLD")).upper()[:24],
             "headline_en": str(item.get("headline_en", primary["title"]))[:180],
-            "headline_ur": str(item.get("headline_ur", ""))[:180],
             "summary_en": str(item.get("summary_en", ""))[:550],
-            "summary_ur": str(item.get("summary_ur", ""))[:550],
             "why_en": str(item.get("why_en", ""))[:350],
-            "why_ur": str(item.get("why_ur", ""))[:350],
             "sources": [
                 {key: source.get(key, "") for key in (
                     "title", "url", "date", "domain", "source_country"
@@ -157,25 +152,23 @@ Reporting supplied:
             hashtags.append(tag if tag.startswith("#") else f"#{tag}")
     hashtags = hashtags[:8]
 
-    def make_caption(en: str, ur: str) -> str:
+    def make_caption(en: str) -> str:
         source_lines = [
             f"• {source['domain']}: {source['url']}"
             for source in _unique_sources(stories)[:5]
         ]
         parts = [
-            str(en).strip(), str(ur).strip(),
-            "Sources:\n" + "\n".join(source_lines),
+            str(en).strip(),
+            "Sources:\\n" + "\\n".join(source_lines),
             " ".join(hashtags),
         ]
-        return "\n\n".join(part for part in parts if part)[:2190]
+        return "\\n\\n".join(part for part in parts if part)[:2190]
 
     return {
         "date": local_date, "slot": slot, "stories": stories,
         "carousel_caption": make_caption(
-            brief.get("carousel_caption_en", "Your global news briefing."),
-            brief.get("carousel_caption_ur", "")),
+            brief.get("carousel_caption_en", "Your global news briefing.")),
         "single_caption": make_caption(
-            brief.get("single_caption_en", "One story to understand today."),
-            brief.get("single_caption_ur", "")),
+            brief.get("single_caption_en", "One story to understand today.")),
         "hashtags": hashtags, "model": model,
     }
