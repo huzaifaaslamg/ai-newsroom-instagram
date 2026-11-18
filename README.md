@@ -1,20 +1,24 @@
 # AI Newsroom — Instagram Automation
 
-A bilingual (English + Urdu) global-news publisher for an Instagram Professional account. The workflow runs at **08:07 and 20:07 Asia/Karachi**. Each run builds:
+An English-only global-news publisher for an Instagram Professional account. The workflow runs at **08:07 and 20:07 Asia/Karachi**. Each run builds:
 
 1. An editorial news carousel of up to 7 slides (cover, four or five story slides, sources page).
 2. A single-image explainer for the leading story.
-3. Bilingual captions, source links, and relevant hashtags.
+3. English-only captions, source links, and relevant hashtags.
 
 That produces **four feed posts per day** when Instagram publishing is enabled.
+
+## Language
+
+All carousel slides, single-image posts, captions, alt text, and hashtags are English-only. Urdu and other languages are not used.
 
 ## How it works
 
 - **GDELT DOC API** discovers recent news articles when available.
 - If GDELT is rate-limited, **direct publisher RSS feeds** (BBC News sections, Al Jazeera English, and The Guardian sections) provide backup headlines, summaries, and publisher article links.
 - **Trafilatura** extracts article text from publisher pages; a sufficiently detailed publisher-provided RSS summary is used only when the full page cannot be extracted.
-- **Gemini API** selects and summarises stories in English and Urdu.
-- **Pillow** creates 1080 × 1350 JPEG cards. Graphics are rendered from text and shapes rather than generating synthetic photographs of real news events.
+- **Gemini API** selects and summarises stories in English only.
+- **Pillow** creates 1080 × 1350 JPEG cards. Graphics are rendered from English text and shapes rather than generating synthetic photographs of real news events.
 - **GitHub Actions** schedules the twice-daily runs.
 - **Instagram Graph API with Instagram Login** publishes the image and carousel containers.
 
@@ -24,7 +28,7 @@ The public repository is used as a simple static origin for generated JPEGs. Ins
 
 The project uses no Make.com, Zapier, paid image-generation service, or paid hosting. However, **Gemini Pro in the Gemini app is not the same thing as Gemini API access**. You need a Gemini API key from Google AI Studio. The text model configured by default has a published free API tier, subject to model availability, account eligibility, rate limits, and Google policy changes. Do not enable billing merely to make this project run.
 
-The project generates its own visual layouts locally with Pillow, so it does not call a paid image-generation API. GitHub Actions and raw GitHub hosting are used within their applicable free-plan limits. The workflow can be delayed or skipped by GitHub service availability and free-plan quotas; it is not a guaranteed commercial scheduler.
+The project generates its own English-only visual layouts locally with Pillow, so it does not call a paid image-generation API. GitHub Actions and raw GitHub hosting are used within their applicable free-plan limits. The workflow can be delayed or skipped by GitHub service availability and free-plan quotas; it is not a guaranteed commercial scheduler.
 
 Meta does not charge a separate fee for ordinary API content publishing, but Meta app setup, permission, account eligibility, access-token expiry, and platform limits apply.
 
