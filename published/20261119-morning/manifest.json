@@ -1,0 +1,121 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-19",
+  "slot": "morning",
+  "run_id": "20261119-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-19T03:34:41.384371+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Israeli Forces Launch Rare Central Gaza Ground Offensive Beyond Yellow Line",
+      "summary_en": "Israeli ground forces and tanks have advanced into central Gaza west of the designated Yellow Line near Nuseirat refugee camp and Salah al-Din road. The Israeli military stated the operation targeted a tunnel threatening its forces, while Hamas condemned the move as a flagrant violation of their ceasefire agreement.",
+      "why_en": "The advance represents the first major ground offensive announced by Israel since the October 2025 ceasefire, escalating fears of renewed widespread displacement across Gaza.",
+      "sources": [
+        {
+          "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
+          "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "What does Israel’s new ground offensive mean for Palestinians in Gaza?",
+          "url": "https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "US Defence Secretary Pete Hegseth Announces Military Cooperation Pact in Venezuela",
+      "summary_en": "United States Defence Secretary Pete Hegseth conducted a surprise visit to Caracas to meet Venezuela's interim President Delcy Rodriguez. The two governments announced a new bilateral military agreement focusing on intelligence sharing, joint training, and regional security cooperation.",
+      "why_en": "The pact formalises a swift security alignment between Washington and Caracas following the US operation that removed former President Nicolas Maduro earlier this year.",
+      "sources": [
+        {
+          "title": "US Defence Secretary Hegseth reveals military partnership on Venezuela trip",
+          "url": "https://www.aljazeera.com/news/2026/11/18/us-defence-secretary-announces-military-partnership-on-trip-to-venezuela?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        },
+        {
+          "title": "Hegseth uses Venezuela visit to boast of Maduro’s capture by US military",
+          "url": "https://www.theguardian.com/world/2026/nov/18/pete-hegseth-venezuela-nicolas-maduro-military",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Trump Greeted by Xi and Putin Ahead of Landmark Talks in China",
+      "summary_en": "US President Donald Trump arrived in Shenzhen for the Asia-Pacific Economic Cooperation forum, where he was welcomed by Chinese President Xi Jinping and met Russian President Vladimir Putin. The three leaders are scheduled to hold their first joint in-person trilateral summit.",
+      "why_en": "The summit marks the first face-to-face gathering of the US, Chinese, and Russian heads of state to address critical global security tensions, trade, and international conflicts.",
+      "sources": [
+        {
+          "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+          "url": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "Anthropic Prepares US Market Flotation Valuing AI Firm Over One Trillion",
+      "summary_en": "Artificial intelligence developer Anthropic is listing shares on the US stock market at an expected range of $70 to $78 per share, establishing an overall valuation surpassing $1 trillion. The move will substantially boost the paper wealth of its seven co-founders, who launched the firm in 2021.",
+      "why_en": "The milestone initial public offering underscores the rapid financial growth and dominance of frontier generative AI providers in global capital markets.",
+      "sources": [
+        {
+          "title": "The seven Anthropic founders who are about to become multi-billionaires",
+          "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "CULTURE",
+      "headline_en": "Grand Theft Auto 6 Receives Record-Tying Critical Acclaim Following Long Wait",
+      "summary_en": "The long-awaited release of Grand Theft Auto 6 has garnered overwhelmingly positive reviews, earning a 99 out of 100 aggregate score on Metacritic to tie an industry record standing since 1998. Reviewers highlighted the title's detailed world-building, technical fidelity, and character depth.",
+      "why_en": "After 13 years in development, the game's release stands as one of the most prominent entertainment and tech product rollouts of the decade.",
+      "sources": [
+        {
+          "title": "Grand Theft Auto 6 is a masterpiece, say critics",
+          "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261119-morning/carousel_01.jpg",
+        "published/20261119-morning/carousel_02.jpg",
+        "published/20261119-morning/carousel_03.jpg",
+        "published/20261119-morning/carousel_04.jpg",
+        "published/20261119-morning/carousel_05.jpg",
+        "published/20261119-morning/carousel_06.jpg",
+        "published/20261119-morning/carousel_07.jpg"
+      ],
+      "caption": "Our morning briefing covers an Israeli ground operation in central Gaza, a US-Venezuela defence pact, landmark trilateral talks in Shenzhen, and major milestones in business and tech.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/18/us-defence-secretary-announces-military-partnership-on-trip-to-venezuela?traffic_source=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/18/pete-hegseth-venezuela-nicolas-maduro-military\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Geopolitics #MiddleEast #Venezuela #AsiaPacific #ArtificialIntelligence #BusinessNews #Gaming",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261119-morning/single_headline.jpg",
+      "caption": "Explore today's comprehensive world update, featuring major geopolitical meetings in Shenzhen, regional developments in Gaza and Caracas, and historic tech milestones.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/18/us-defence-secretary-announces-military-partnership-on-trip-to-venezuela?traffic_source=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/18/pete-hegseth-venezuela-nicolas-maduro-military\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Geopolitics #MiddleEast #Venezuela #AsiaPacific #ArtificialIntelligence #BusinessNews #Gaming",
+      "alt_text": "English-only news graphic: Israeli Forces Launch Rare Central Gaza Ground Offensive Beyond Yellow Line"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
