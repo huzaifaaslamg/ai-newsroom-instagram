@@ -1,0 +1,107 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-19",
+  "slot": "evening",
+  "run_id": "20261119-evening",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-19T16:29:49.526950+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Danish Parliament Unanimously Ratifies Security Deal Over Greenland With US",
+      "summary_en": "Denmark's parliament has unanimously approved a security agreement with the United States regarding Greenland to strengthen security across the Arctic and North Atlantic. The deal permits the construction of two US military bases, blocks non-EU and non-NATO countries from strategic sectors, and will remain valid even if Greenland achieves independence.",
+      "why_en": "The agreement settles diplomatic friction surrounding US strategic interests in Greenland and establishes a binding defense framework across a vital Arctic transit corridor.",
+      "sources": [
+        {
+          "title": "Denmark parliament approves security deal with Greenland and US",
+          "url": "https://www.aljazeera.com/news/2026/11/19/denmark-parliament-approves-security-deal-with-greenland-and-us?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "Anthropic Raises $81 Billion in Historic Stock Market Flotation",
+      "summary_en": "AI firm Anthropic raised $81 billion in its New York initial public offering, pricing shares at $83 each and valuing the company at roughly $1.5 trillion. The company behind Claude became the first dedicated AI developer to list publicly, drawing substantial demand despite reporting significant operating losses alongside revenue growth.",
+      "why_en": "The landmark flotation represents a critical market test of investor appetite and financial sustainability for capital-intensive frontier artificial intelligence technology.",
+      "sources": [
+        {
+          "title": "Anthropic raises $81bn in record-breaking stock market debut",
+          "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "CLIMATE",
+      "headline_en": "Datacentres Face 70% Emissions Rise by 2030, IEA Warns",
+      "summary_en": "An International Energy Agency report warns that carbon emissions from global datacentres are on track to increase by 70% by 2030 as electricity consumption doubles. Artificial intelligence expansion accounts for three-quarters of this growth, with the US and China projected to rely heavily on gas and coal power to supply server demand.",
+      "why_en": "The rapid energy requirements of artificial intelligence risk undermining global decarbonisation goals and placing severe burdens on regional electricity grids.",
+      "sources": [
+        {
+          "title": "Datacentres to create 70% more carbon emissions by 2030, IEA report warns",
+          "url": "https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ECONOMY",
+      "headline_en": "UK Government Introduces Bill to Scrap Leasehold System for Flats",
+      "summary_en": "The UK government has introduced legislation to phase out the leasehold system for newly constructed flats in England and Wales, replacing it with collective commonhold ownership. The Commonhold and Leasehold Reform Bill also seeks to cap existing ground rents at £250 annually before phasing them out over 40 years.",
+      "why_en": "The reform intends to bring English property laws in line with standard international models, though commercial freehold groups argue the changes threaten property and pension investments.",
+      "sources": [
+        {
+          "title": "Leasehold system set to be scrapped in England and Wales",
+          "url": "https://www.bbc.co.uk/news/articles/cw987ynpd0n1o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "SPORTS",
+      "headline_en": "FIFA Confirms Two Candidates to Challenge Gianni Infantino for Presidency",
+      "summary_en": "Football's world governing body confirmed that French Football Federation president Philippe Diallo and Japanese Football Association president Kozo Tashima will run against Gianni Infantino in the March 2027 presidential election. This marks the first contested race for Infantino since he was elected without opposition in 2023.",
+      "why_en": "The candidacies reflect dissatisfaction among European and global federations regarding FIFA's governance and commercial strategies over recent years.",
+      "sources": [
+        {
+          "title": "FIFA confirms Diallo, Tashima as Infantino’s challengers at 2027 election",
+          "url": "https://www.aljazeera.com/sports/2026/11/19/fifa-confirms-diallo-tashima-as-infantinos-challengers-at-2027-election?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261119-evening/carousel_01.jpg",
+        "published/20261119-evening/carousel_02.jpg",
+        "published/20261119-evening/carousel_03.jpg",
+        "published/20261119-evening/carousel_04.jpg",
+        "published/20261119-evening/carousel_05.jpg",
+        "published/20261119-evening/carousel_06.jpg",
+        "published/20261119-evening/carousel_07.jpg"
+      ],
+      "caption": "Our evening briefing covers Denmark's Arctic agreement, Anthropic's record market debut, surging AI emissions, UK housing reform, and FIFA's leadership challenge.\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/19/denmark-parliament-approves-security-deal-with-greenland-and-us?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw987ynpd0n1o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/sports/2026/11/19/fifa-confirms-diallo-tashima-as-infantinos-challengers-at-2027-election?traffic_source=rss\n\n#WorldNews #GlobalAffairs #Business #Technology #Climate #Economy #Football",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261119-evening/single_headline.jpg",
+      "caption": "A summary of key global stories this evening, spanning international security, market flotations, climate impacts, legal reforms, and sports governance.\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/19/denmark-parliament-approves-security-deal-with-greenland-and-us?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw987ynpd0n1o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/sports/2026/11/19/fifa-confirms-diallo-tashima-as-infantinos-challengers-at-2027-election?traffic_source=rss\n\n#WorldNews #GlobalAffairs #Business #Technology #Climate #Economy #Football",
+      "alt_text": "English-only news graphic: Danish Parliament Unanimously Ratifies Security Deal Over Greenland With US"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
