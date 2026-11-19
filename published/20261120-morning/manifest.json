@@ -1,0 +1,128 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-20",
+  "slot": "morning",
+  "run_id": "20261120-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-20T03:39:54.506381+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Trump, Xi and Putin Issue Joint Declaration After Historic Shenzhen Summit",
+      "summary_en": "US President Donald Trump, Chinese President Xi Jinping, and Russian President Vladimir Putin met for trilateral talks in Shenzhen, issuing a joint declaration stating that nuclear war cannot be won and must never be fought. The leaders agreed to boost petroleum production, pursue UN reform, and restrict the reach of international courts, though the statement omitted direct mention of the wars in Ukraine and Iran.",
+      "why_en": "The meeting is the first trilateral summit between the heads of state of the three major global powers, carrying broad implications for global diplomacy, strategic stability, and international alliances.",
+      "sources": [
+        {
+          "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+          "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "China, Russia and US agree peace declaration with no mention of Ukraine and Iran wars",
+          "url": "https://www.theguardian.com/world/2026/nov/19/china-russia-us-agree-peace-statement-no-mention-ukraine-iran-wars",
+          "date": "",
+          "domain": "www.theguardian.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "UN Top Court Rules Myanmar Committed Genocide Against Rohingya Minority",
+      "summary_en": "The International Court of Justice ruled by a 9-6 majority that Myanmar committed genocide against the Rohingya minority during military clearance operations in 2017. The court determined that widespread killings, sexual violence, and village burnings demonstrated clear genocidal intent, ordering Myanmar to pay reparations to be established at a later date.",
+      "why_en": "The verdict marks the first time in history that an international court has found a sovereign state guilty of violating the 1948 Genocide Convention.",
+      "sources": [
+        {
+          "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+          "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "Bowen: Myanmar genocide verdict is historic and could have far-reaching implications",
+          "url": "https://www.bbc.co.uk/news/articles/c6ly58ndgd0no?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "Anthropic Valued at Over One Trillion Dollars in Public Market Debut",
+      "summary_en": "Artificial intelligence developer Anthropic raised over $81 billion in its initial public offering on the Nasdaq exchange, pricing shares at $83 before they closed their first trading day at $97. The debut gave the maker of the Claude chatbot a market valuation of roughly $1.76 trillion despite broader declines across major technology stocks.",
+      "why_en": "As the first pure-play artificial intelligence company to list publicly, Anthropic's performance is viewed by markets as a pivotal barometer for the financial viability of massive industry-wide AI investments.",
+      "sources": [
+        {
+          "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+          "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "Anthropic raises $81bn in record-breaking stock market debut",
+          "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "TECHNOLOGY",
+      "headline_en": "US Approved Export of Nearly 900,000 Advanced AI Chips to China",
+      "summary_en": "The US House Foreign Affairs Committee revealed that the Commerce Department approved the export of approximately 879,000 advanced Nvidia and AMD artificial intelligence processors to Chinese firms between December 2025 and May 2026. Approved recipients included Tencent, Alibaba, Baidu, and BYD, all of which are designated by the Pentagon as Chinese military-backed entities.",
+      "why_en": "The disclosure highlights intense domestic and international friction surrounding US export controls and national security policies in high-performance computing.",
+      "sources": [
+        {
+          "title": "US signed off on sales of nearly 900,000 AI chips to China in six months",
+          "url": "https://www.aljazeera.com/economy/2026/11/19/us-signed-off-on-sales-of-nearly-900000-ai-chips-to-china-in-six-months?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "TECHNOLOGY",
+      "headline_en": "Dutch Privacy Watchdog Advises Consumers Against Buying AI Smart Glasses",
+      "summary_en": "The Dutch Data Protection Authority has urged the public not to buy smart glasses after testing models across multiple price ranges and discovering critical functional and privacy flaws. Regulators reported that devices gave inaccurate emergency and medical advice, offered dating guidance regarding a minor, and exhibited security vulnerabilities allowing unauthorized remote access.",
+      "why_en": "The advisory reflects growing regulatory scrutiny over the accuracy, safety, and surveillance risks associated with wearable artificial intelligence devices.",
+      "sources": [
+        {
+          "title": "Dutch watchdog tells people not to buy AI smart glasses",
+          "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261120-morning/carousel_01.jpg",
+        "published/20261120-morning/carousel_02.jpg",
+        "published/20261120-morning/carousel_03.jpg",
+        "published/20261120-morning/carousel_04.jpg",
+        "published/20261120-morning/carousel_05.jpg",
+        "published/20261120-morning/carousel_06.jpg",
+        "published/20261120-morning/carousel_07.jpg"
+      ],
+      "caption": "Here is the morning briefing for November 20, 2026, covering major developments in world diplomacy, international law, business, and technology. What are your perspectives on these events? Join the conversation below.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/19/china-russia-us-agree-peace-statement-no-mention-ukraine-iran-wars\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6ly58ndgd0no?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Diplomacy #InternationalLaw #ArtificialIntelligence #BusinessNews #Technology #GlobalAffairs #MorningBriefing",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261120-morning/single_headline.jpg",
+      "caption": "A global briefing for November 20, 2026, featuring updates on the Shenzhen trilateral summit, the ICJ genocide ruling, market debuts, and emerging tech oversight. Share your thoughts respectfully in the comments.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss\n• www.theguardian.com: https://www.theguardian.com/world/2026/nov/19/china-russia-us-agree-peace-statement-no-mention-ukraine-iran-wars\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6ly58ndgd0no?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss\n\n#WorldNews #Diplomacy #InternationalLaw #ArtificialIntelligence #BusinessNews #Technology #GlobalAffairs #MorningBriefing",
+      "alt_text": "English-only news graphic: Trump, Xi and Putin Issue Joint Declaration After Historic Shenzhen Summit"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
