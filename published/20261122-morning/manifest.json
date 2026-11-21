@@ -1,0 +1,107 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-22",
+  "slot": "morning",
+  "run_id": "20261122-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-22T01:53:14.068846+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "French Protesters March for Sixth Weekend Over Living Costs and Public Services",
+      "summary_en": "Tens of thousands of people demonstrated across French cities on Saturday during a sixth consecutive weekend of rallies against high living costs, inadequate public services, and recently passed legislation protecting police firearms use. Official and organizer estimates showed a decline in overall turnout compared to earlier weeks, though scattered clashes and vehicle fires occurred on demonstration fringes.",
+      "why_en": "The marches demonstrate sustained social dissatisfaction among youth, workers, and unions over economic pressures and state policies across France.",
+      "sources": [
+        {
+          "title": "French protesters rally for sixth weekend over living costs , public services",
+          "url": "https://www.channelnewsasia.com/world/french-protesters-rally-sixth-weekend-over-living-costs-public-services-6571961",
+          "date": "2026-11-21T20:30:00+00:00",
+          "domain": "channelnewsasia.com",
+          "source_country": "United States"
+        }
+      ]
+    },
+    {
+      "category": "HEALTH",
+      "headline_en": "Scottish Government Orders Independent Review of NHS Grampian After Fatal Incidents",
+      "summary_en": "Scottish Health Secretary Angela Constance commissioned an urgent, independent review into hepatobiliary surgery at NHS Grampian after a leaked 2022 document disclosed 19 avoidable deaths out of 31 reviewed surgical cases. The inquiry will scrutinize how concerns raised by whistleblower Dr. Mohammed Habib and others were managed by health board executives and the Scottish Government.",
+      "why_en": "The review addresses severe patient safety questions and administrative accountability within Scotland's public healthcare infrastructure.",
+      "sources": [
+        {
+          "title": "Independent review ordered after NHS Grampian revelations",
+          "url": "https://www.westerntelegraph.co.uk/news/national/26750710.independent-review-ordered-nhs-grampian-revelations/",
+          "date": "2026-11-21T20:30:00+00:00",
+          "domain": "westerntelegraph.co.uk",
+          "source_country": "United Kingdom"
+        }
+      ]
+    },
+    {
+      "category": "ECONOMY",
+      "headline_en": "Philippine Officials Clarify Trade Talks After Sweeping US Purchase Claims",
+      "summary_en": "Philippine officials clarified that trade talks with Washington remain ongoing after US President Donald Trump claimed Manila agreed to purchase 100 percent of its agricultural and energy needs from the United States. Philippine Energy Secretary Sharon Garin affirmed that negotiations are not finalized and will focus on delivering benefits to Filipino households.",
+      "why_en": "The clarification addresses public scrutiny and trade strategy questions following conflicting statements regarding bilateral economic commitments.",
+      "sources": [
+        {
+          "title": "Disclose  100 % deal with Trump | Daily Tribune",
+          "url": "https://tribune.net.ph/2026/11/21/disclose-100-deal-with-trump",
+          "date": "2026-11-21T20:30:00+00:00",
+          "domain": "tribune.net.ph",
+          "source_country": "Philippines"
+        }
+      ]
+    },
+    {
+      "category": "TECH",
+      "headline_en": "ITU Report Highlights Substantial Mobile Internet Usage Divide Across Africa",
+      "summary_en": "A report from the International Telecommunication Union found that mobile broadband signals reach 89 percent of the African population, yet only 42 percent actively use the internet. The agency identified affordability as a critical barrier, noting a 5 GB mobile data package costs roughly 4.5 percent of the average African income.",
+      "why_en": "The findings highlight that economic factors rather than network infrastructure currently present the primary barrier to expanding global digital connectivity.",
+      "sources": [
+        {
+          "title": "Mobile broadband reaches 89 % of Africans but only 42 % are online , ITU data shows",
+          "url": "https://kenya-today.com/report-mobile-broadband-reaches-89-of-africans-but-only-42-are-online-itu-data-shows-31028/",
+          "date": "2026-11-21T20:30:00+00:00",
+          "domain": "kenya-today.com",
+          "source_country": "Kenya"
+        }
+      ]
+    },
+    {
+      "category": "SCIENCE",
+      "headline_en": "Royal Air Force Chief Signals Shift to Drones After Current Fighter Project",
+      "summary_en": "Air Chief Marshal Sir Harv Smyth stated that the sixth-generation stealth aircraft being developed under the Global Combat Air Programme is likely the last crewed fighter the Royal Air Force will ever construct. Smyth indicated that future air combat capabilities will rely primarily on autonomous, artificial intelligence-enabled unmanned aircraft.",
+      "why_en": "The announcement outlines a fundamental doctrine shift in military aviation away from manned combat aircraft toward autonomous technology.",
+      "sources": [
+        {
+          "title": "RAF building its last manned fighter jet as drones take over",
+          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/",
+          "date": "2026-11-21T20:30:00+00:00",
+          "domain": "telegraph.co.uk",
+          "source_country": "United Kingdom"
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261122-morning/carousel_01.jpg",
+        "published/20261122-morning/carousel_02.jpg",
+        "published/20261122-morning/carousel_03.jpg",
+        "published/20261122-morning/carousel_04.jpg",
+        "published/20261122-morning/carousel_05.jpg",
+        "published/20261122-morning/carousel_06.jpg",
+        "published/20261122-morning/carousel_07.jpg"
+      ],
+      "caption": "Our morning briefing covers protests across France, healthcare investigations in Scotland, international trade developments, digital connectivity gaps, and changing defense technologies. What are your perspectives on these issues?\n\nSources:\n• channelnewsasia.com: https://www.channelnewsasia.com/world/french-protesters-rally-sixth-weekend-over-living-costs-public-services-6571961\n• westerntelegraph.co.uk: https://www.westerntelegraph.co.uk/news/national/26750710.independent-review-ordered-nhs-grampian-revelations/\n• tribune.net.ph: https://tribune.net.ph/2026/11/21/disclose-100-deal-with-trump\n• kenya-today.com: https://kenya-today.com/report-mobile-broadband-reaches-89-of-africans-but-only-42-are-online-itu-data-shows-31028/\n• telegraph.co.uk: https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/\n\n#WorldNews #MorningBriefing #France #Healthcare #Economy #Technology #Aviation #GlobalAffairs",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261122-morning/single_headline.jpg",
+      "caption": "Today's briefing explores French cost-of-living rallies, an NHS surgical inquiry, US-Philippine trade talks, African internet access, and autonomous military aviation. Share your thoughts on today's developments.\n\nSources:\n• channelnewsasia.com: https://www.channelnewsasia.com/world/french-protesters-rally-sixth-weekend-over-living-costs-public-services-6571961\n• westerntelegraph.co.uk: https://www.westerntelegraph.co.uk/news/national/26750710.independent-review-ordered-nhs-grampian-revelations/\n• tribune.net.ph: https://tribune.net.ph/2026/11/21/disclose-100-deal-with-trump\n• kenya-today.com: https://kenya-today.com/report-mobile-broadband-reaches-89-of-africans-but-only-42-are-online-itu-data-shows-31028/\n• telegraph.co.uk: https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/\n\n#WorldNews #MorningBriefing #France #Healthcare #Economy #Technology #Aviation #GlobalAffairs",
+      "alt_text": "English-only news graphic: French Protesters March for Sixth Weekend Over Living Costs and Public Services"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
