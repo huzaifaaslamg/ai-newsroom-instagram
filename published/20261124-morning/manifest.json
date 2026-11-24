@@ -1,0 +1,121 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-24",
+  "slot": "morning",
+  "run_id": "20261124-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-24T07:09:05.892356+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "BUSINESS",
+      "headline_en": "US Blacklists Megaspeed Following Reinstatement of Nvidia CEO Jensen Huang",
+      "summary_en": "The US Department of Commerce has placed Singapore-based Megaspeed International and six affiliated companies on its trade blacklist over national security concerns. The action followed the reinstatement of Nvidia chief executive Jensen Huang, who returned days after resigning over reported ties to an executive at Megaspeed alleged to have links to Chinese intelligence.",
+      "why_en": "Megaspeed is under investigation over suspicions of diverting advanced artificial intelligence chips to China, underscoring ongoing geopolitical conflict over critical semiconductor technology.",
+      "sources": [
+        {
+          "title": "US adds Megaspeed, firm at centre of Nvidia scandal, to export control list",
+          "url": "https://www.aljazeera.com/economy/2026/11/24/us-adds-megaspeed-firm-at-centre-of-nvidia-scandal-to-export-control-list?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        },
+        {
+          "title": "Nvidia reinstates CEO Jensen Huang after affair with alleged spy as Trump says 'I made the deal'",
+          "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+          "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "POLITICS",
+      "headline_en": "Appeals Court Revives Trump Bid for Federal Jurisdiction in New York Case",
+      "summary_en": "A panel of the 2nd US Circuit Court of Appeals reversed a lower court ruling that blocked President Donald Trump's effort to transfer his New York hush-money conviction to federal court. The appeals judges ruled that post-conviction removal is not categorically unavailable and directed a Manhattan federal judge to assess the jurisdictional request.",
+      "why_en": "Trump is seeking to move the case to federal jurisdiction to invoke presidential immunity protections in a bid to overturn his 34 felony convictions for falsifying business records.",
+      "sources": [
+        {
+          "title": "Appeals court renews Trump bid for federal jurisdiction in hush-money case",
+          "url": "https://www.aljazeera.com/news/2026/11/24/appeals-court-renews-trump-bid-for-federal-jurisdiction-in-hush-money-case?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Bukele Confirms Deaths of Three Salvadoran Soldiers on Haiti Mission",
+      "summary_en": "Salvadoran President Nayib Bukele announced that three Salvadoran soldiers deployed on an anti-gang operation in Haiti were killed, including two corporals who died when a grenade detonated while they were disarming a drone. Bukele promised financial compensation to their families and pledged that deployed soldiers may leave the mission immediately without fear of reprisal.",
+      "why_en": "El Salvador deployed 2,500 troops to Haiti last month, drawing growing scrutiny from human rights observers and international bodies regarding operational oversight and mission mandates.",
+      "sources": [
+        {
+          "title": "Bukele shares details on deaths of Salvadoran troops in Haiti intervention",
+          "url": "https://www.aljazeera.com/news/2026/11/24/bukele-shares-details-on-deaths-of-salvadoran-troops-in-haiti-intervention?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Israel Approves Resumption of Flydubai Flights to Tel Aviv",
+      "summary_en": "Israeli Transportation Minister Miri Regev approved the return of Flydubai commercial flights to Tel Aviv following talks between Israeli and Emirati aviation officials in Dubai. Service had been halted since late September after an onboard incident led to an emergency landing in Saudi Arabia, and final resumption remains subject to Israeli security clearance.",
+      "why_en": "The move marks an initial step toward restoring regular passenger aviation links between the United Arab Emirates and Israel following months of disrupted air travel.",
+      "sources": [
+        {
+          "title": "Israeli minister approves return of Flydubai flights",
+          "url": "https://www.aljazeera.com/news/2026/11/24/israeli-minister-approves-return-of-flydubai-flights?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ECONOMY",
+      "headline_en": "UK Disability Benefits Review Proposes Faster Payments for Severe Conditions",
+      "summary_en": "An independent review of the UK's Personal Independence Payment led by Disability Minister Sir Stephen Timms will propose fast-tracking financial support without repeated assessments for individuals with severe and terminal conditions. The review focuses on aligning payments with claimants' real-life costs rather than instituting major spending reductions.",
+      "why_en": "The benefit serves roughly four million people, with government expenditures projected to increase from 32.1 billion pounds this financial year to 41.5 billion pounds by 2031.",
+      "sources": [
+        {
+          "title": "Benefits review to suggest quicker payment for some disabled people",
+          "url": "https://www.bbc.co.uk/news/articles/cvx2xjed2r3ro?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261124-morning/carousel_01.jpg",
+        "published/20261124-morning/carousel_02.jpg",
+        "published/20261124-morning/carousel_03.jpg",
+        "published/20261124-morning/carousel_04.jpg",
+        "published/20261124-morning/carousel_05.jpg",
+        "published/20261124-morning/carousel_06.jpg",
+        "published/20261124-morning/carousel_07.jpg"
+      ],
+      "caption": "Morning briefing: US trade measures touch Nvidia ties, Donald Trump's jurisdictional appeal advances, troop deaths in Haiti, Middle East flight resumptions, and UK welfare review findings. Which development are you watching most closely?\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/economy/2026/11/24/us-adds-megaspeed-firm-at-centre-of-nvidia-scandal-to-export-control-list?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/24/appeals-court-renews-trump-bid-for-federal-jurisdiction-in-hush-money-case?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/24/bukele-shares-details-on-deaths-of-salvadoran-troops-in-haiti-intervention?traffic_source=rss\n\n#WorldNews #GlobalAffairs #Nvidia #Trump #Haiti #Aviation #UKNews #DailyBriefing",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261124-morning/single_headline.jpg",
+      "caption": "Today's global briefing covers major developments across technology trade policy, US legal appeals, international missions, aviation, and public welfare.\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/economy/2026/11/24/us-adds-megaspeed-firm-at-centre-of-nvidia-scandal-to-export-control-list?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/24/appeals-court-renews-trump-bid-for-federal-jurisdiction-in-hush-money-case?traffic_source=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/24/bukele-shares-details-on-deaths-of-salvadoran-troops-in-haiti-intervention?traffic_source=rss\n\n#WorldNews #GlobalAffairs #Nvidia #Trump #Haiti #Aviation #UKNews #DailyBriefing",
+      "alt_text": "English-only news graphic: US Blacklists Megaspeed Following Reinstatement of Nvidia CEO Jensen Huang"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
