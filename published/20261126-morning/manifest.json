@@ -1,0 +1,121 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-26",
+  "slot": "morning",
+  "run_id": "20261126-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-26T04:35:48.554484+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Gaza Municipalities Warn Winter Rains Threaten Around 1,000 Displacement Camps",
+      "summary_en": "The Union of Gaza Strip Municipalities warned that winter storms could flood around 1,000 camps and shelters across the enclave due to broken sewer lines and a lack of water pumps. The European Commission urged Israel to clear border backlogs of shelter materials, while Israeli coordination body COGAT reported nearly 100,000 tents have been delivered under a winter assistance initiative.",
+      "why_en": "Severe infrastructure degradation and tight aid entry restrictions leave hundreds of thousands of displaced people vulnerable to harsh seasonal weather and uninhabitable living conditions.",
+      "sources": [
+        {
+          "title": "Winter rains threaten 1,000 Gaza shelter sites, councils warn",
+          "url": "https://www.aljazeera.com/news/2026/11/25/winter-rains-threaten-1000-gaza-shelter-sites-councils-warn?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ECONOMY",
+      "headline_en": "United States Unveils New Proposed Tariffs on China and European Union",
+      "summary_en": "The United States announced a new wave of proposed import tariffs impacting major commercial partners, including China, the European Union, and 12 other jurisdictions, with rates reaching up to 40 percent. The European Commission rejected the measures, while market analysts noted the duties largely replace previously announced taxes and will take effect next year.",
+      "why_en": "The policy signals heightened trade friction between leading global economies, with potential impacts on manufacturing supply chains and domestic consumer prices.",
+      "sources": [
+        {
+          "title": "US announces new tariff proposals on EU, China, and other trade partners",
+          "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "US stocks fall further as fears over AI intensify",
+          "url": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "SCIENCE",
+      "headline_en": "European Space Probe Finds Stadium-Sized Crater on Asteroid Dimorphos",
+      "summary_en": "Close-up imagery from the European Space Agency's Hera mission has revealed a stadium-sized crater on the asteroid Dimorphos resulting from NASA's 2022 DART impact test. Scientists observed that the kinetic deflection experiment altered the asteroid's shape and left it tumbling chaotically along its orbit around companion rock Didymos.",
+      "why_en": "Documenting the physical aftermath of the collision provides critical data needed to refine planetary defense strategies for deflecting potentially hazardous space objects away from Earth.",
+      "sources": [
+        {
+          "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
+          "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "BUSINESS",
+      "headline_en": "British Discount Chain Poundland Enters Administration, Risking 11,000 Jobs",
+      "summary_en": "Discount retailer Poundland collapsed into administration after its owner, Gordon Brothers, failed to reach a rescue deal with bidders, putting 11,000 employees at risk across 600 UK and Irish stores. Appointed administrators AlixPartners plan to keep shops trading while seeking buyers for the company and its assets.",
+      "why_en": "The insolvency threatens thousands of high street livelihoods right before the peak holiday trading season, spotlighting severe tensions between corporate debt restructuring and retail operational viability.",
+      "sources": [
+        {
+          "title": "Poundland collapses putting 11,000 jobs at risk",
+          "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "What's gone wrong at Poundland?",
+          "url": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "SPORTS",
+      "headline_en": "Roma Halts Paris Saint-Germain Winning Run With Champions League Draw",
+      "summary_en": "Roma held injury-depleted Paris Saint-Germain to a 2-2 Champions League draw at the Parc des Princes, snapping PSG's 12-match winning run across all competitions. A late penalty from substitute Donyell Malen leveled the score after strikes from Mario Hermoso, Illia Zabarnyi, and Ousmane Dembele.",
+      "why_en": "The draw knocks PSG off the top spot in the league phase table, leaving Real Madrid as the competition's only club retaining a 100 percent win record after five rounds.",
+      "sources": [
+        {
+          "title": "Malen and Roma deny injury-hit PSG in Champions League draw",
+          "url": "https://www.aljazeera.com/sports/2026/11/25/malen-and-roma-deny-injury-hit-psg-in-champions-league-draw?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261126-morning/carousel_01.jpg",
+        "published/20261126-morning/carousel_02.jpg",
+        "published/20261126-morning/carousel_03.jpg",
+        "published/20261126-morning/carousel_04.jpg",
+        "published/20261126-morning/carousel_05.jpg",
+        "published/20261126-morning/carousel_06.jpg",
+        "published/20261126-morning/carousel_07.jpg"
+      ],
+      "caption": "This morning's international briefing covers shelter warnings in Gaza, newly proposed US trade tariffs, deep space planetary defense findings, Poundland's administration, and Champions League results. Which development stands out most to you?\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/25/winter-rains-threaten-1000-gaza-shelter-sites-councils-warn?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss\n\n#WorldNews #GlobalBriefing #Economy #ScienceNews #BusinessNews #ChampionsLeague #TradePolicy",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261126-morning/single_headline.jpg",
+      "caption": "From flooding risks in Gaza and US tariff proposals to asteroid impact discoveries and retail shifts in the UK, stay informed on key global events this morning. Share your thoughts in the comments.\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/25/winter-rains-threaten-1000-gaza-shelter-sites-councils-warn?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss\n\n#WorldNews #GlobalBriefing #Economy #ScienceNews #BusinessNews #ChampionsLeague #TradePolicy",
+      "alt_text": "English-only news graphic: Gaza Municipalities Warn Winter Rains Threaten Around 1,000 Displacement Camps"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
