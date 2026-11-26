@@ -1,0 +1,107 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-27",
+  "slot": "morning",
+  "run_id": "20261127-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-27T04:46:56.156029+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "CLIMATE",
+      "headline_en": "Major Thanksgiving Storm Disrupts Travel and Triggers Flooding Across United States",
+      "summary_en": "A powerful storm brought damaging winds, torrential rain, and coastal flooding to the eastern and midwestern United States during the holiday week. The severe weather disrupted travel for millions of people, prompting hundreds of flight cancellations, thousands of delays, power outages, and emergency declarations in New York and New Jersey.",
+      "why_en": "The disruption struck during one of the busiest holiday travel periods of the year, while historic tides and storm surges threatened infrastructure along both coasts.",
+      "sources": [
+        {
+          "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+          "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "TECHNOLOGY",
+      "headline_en": "Asian Tech Economies Face High Market Volatility Over Dependence on Nvidia",
+      "summary_en": "Technology-focused stock markets in Japan, South Korea, and Taiwan experienced sharp swings following movements in Nvidia's share price and growing international regulatory scrutiny. Several Asian economies have invested heavily in semiconductor fabrication, components, and data centres tied directly to Nvidia's artificial intelligence hardware.",
+      "why_en": "The fluctuations highlight the significant exposure of regional economies and supply chains to the commercial and regulatory fortunes of a single chipmaker.",
+      "sources": [
+        {
+          "title": "Asia made a big AI bet on Nvidia. What happens now?",
+          "url": "https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "ENVIRONMENT",
+      "headline_en": "Federal Judge Halts Trump Administration Deep-Sea Mining Plans in the Pacific",
+      "summary_en": "A US federal judge determined that plans to lease seafloor areas off the Northern Mariana Islands for deep-sea mining violated the Endangered Species Act. The court found that federal agencies failed to evaluate potential long-term biological impacts before planning the lease sales.",
+      "why_en": "The decision delivers a second major legal setback to US efforts to accelerate Pacific seabed mining for critical minerals used in batteries and electronics.",
+      "sources": [
+        {
+          "title": "Second court defeat for Trump's deep-sea mining ambitions",
+          "url": "https://www.bbc.co.uk/news/articles/c6y4jyx2m172o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "POLITICS",
+      "headline_en": "UK Net Migration Falls to Lowest Level Since 1997, Official Data Shows",
+      "summary_en": "Official figures show net migration to the United Kingdom declined to 77,000 in the year to June, marking a 92 percent drop from its 2023 peak. The change was driven by tightening visa regulations for workers, students, and asylum applicants alongside sustained high levels of emigration.",
+      "why_en": "The shift brings net migration to its lowest level since 1997, reigniting debate over workforce shortages, border policy, and public services.",
+      "sources": [
+        {
+          "title": "UK net migration at lowest level since 1997 as asylum claims also fall",
+          "url": "https://www.bbc.co.uk/news/articles/cq36gj12n0l3o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "Canada Supreme Court Set to Rule on Quebec Religious Symbols Ban",
+      "summary_en": "The Supreme Court of Canada is scheduled to rule on a legal challenge against Quebec's Bill 21, which prohibits certain public sector employees, including state school teachers and police officers, from wearing religious symbols at work. Civil liberties groups have argued the law disproportionately affects religious minorities.",
+      "why_en": "The landmark judgment will define the constitutional boundaries of provincial secularism measures and the use of mechanisms protecting laws from rights challenges.",
+      "sources": [
+        {
+          "title": "In Canada, Quebec’s religious symbols ban faces a Supreme Court test",
+          "url": "https://www.aljazeera.com/features/2026/11/26/in-canada-quebecs-religious-symbols-ban-faces-a-supreme-court-test?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261127-morning/carousel_01.jpg",
+        "published/20261127-morning/carousel_02.jpg",
+        "published/20261127-morning/carousel_03.jpg",
+        "published/20261127-morning/carousel_04.jpg",
+        "published/20261127-morning/carousel_05.jpg",
+        "published/20261127-morning/carousel_06.jpg",
+        "published/20261127-morning/carousel_07.jpg"
+      ],
+      "caption": "Today's briefing covers severe holiday storm disruptions across the US, market volatility in Asia's tech sector, a US court ruling on seabed mining, UK migration data, and a landmark Canadian secularism case. Share your views on these developments.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6y4jyx2m172o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq36gj12n0l3o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/features/2026/11/26/in-canada-quebecs-religious-symbols-ban-faces-a-supreme-court-test?traffic_source=rss\n\n#WorldNews #GlobalBriefing #Environment #Technology #Politics #Economy",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261127-morning/single_headline.jpg",
+      "caption": "Our briefing details US weather chaos, Asian AI market exposure, a legal halt to Pacific deep-sea mining, historic UK migration falls, and a pivotal Canadian Supreme Court ruling.\n\nSources:\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c6y4jyx2m172o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cq36gj12n0l3o?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/features/2026/11/26/in-canada-quebecs-religious-symbols-ban-faces-a-supreme-court-test?traffic_source=rss\n\n#WorldNews #GlobalBriefing #Environment #Technology #Politics #Economy",
+      "alt_text": "English-only news graphic: Major Thanksgiving Storm Disrupts Travel and Triggers Flooding Across United States"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
