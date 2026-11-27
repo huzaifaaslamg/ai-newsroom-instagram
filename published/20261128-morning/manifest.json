@@ -1,0 +1,128 @@
+{
+  "project": "AI Newsroom",
+  "date": "2026-11-28",
+  "slot": "morning",
+  "run_id": "20261128-morning",
+  "timezone": "Asia/Karachi",
+  "generated_at": "2026-11-28T04:23:44.983261+05:00",
+  "model": "gemini-3.8-flash",
+  "stories": [
+    {
+      "category": "WORLD",
+      "headline_en": "Kenyan Cult Leader Convicted of Manslaughter in 123 Starvation Deaths",
+      "summary_en": "A Mombasa court found Good News International Church leader Paul Mackenzie and 29 followers guilty of manslaughter after directing members to starve themselves to death. Mackenzie's defence was rejected, and his legal team intends to appeal.",
+      "why_en": "The ruling follows previous convictions over mass deaths in the Shakahola forest, a tragedy that prompted national grief and urgent calls for tighter regulation of religious organisations in Kenya.",
+      "sources": [
+        {
+          "title": "Kenyan cult leader guilty of manslaughter more than 123 starvation deaths",
+          "url": "https://www.aljazeera.com/news/2026/11/27/kenyan-cult-leader-guilty-of-manslaughter-more-than-123-starvation-deaths?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "TECHNOLOGY",
+      "headline_en": "Cyber Incident Disrupts UK Online Welfare and Pension Services",
+      "summary_en": "The UK Department for Work and Pensions took key online portals offline following a cyber incident, leaving millions temporarily unable to access universal credit and state pension management systems.",
+      "why_en": "Although officials stated that personal data had not been compromised, the precautionary shutdown caused significant anxiety for welfare recipients facing payment delays and difficulties logging employment searches.",
+      "sources": [
+        {
+          "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
+          "url": "https://www.bbc.co.uk/news/articles/c8wy5p6pv2e2o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "Watch: What has happened to DWP online services?",
+          "url": "https://www.bbc.co.uk/news/videos/cqm251rv0vyyo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WORLD",
+      "headline_en": "US Military Disables Commercial Vessel Attempting to Run Iran Blockade",
+      "summary_en": "US Central Command announced that military aircraft fired precision munitions to disable the propulsion of the Palau-flagged merchant ship M/V Pacific Archer in the Gulf of Oman after it allegedly breached a maritime blockade.",
+      "why_en": "The incident represents the 15th vessel publicly acknowledged as disabled by American forces since the blockade of Iranian ports began, further intensifying naval frictions across the region.",
+      "sources": [
+        {
+          "title": "US military says it disabled merchant ship trying to breach Iran blockade",
+          "url": "https://www.aljazeera.com/news/2026/11/27/us-military-says-it-disabled-merchant-ship-trying-to-breach-iran-blockade?traffic_source=rss",
+          "date": "",
+          "domain": "www.aljazeera.com",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "WEATHER",
+      "headline_en": "Severe Thanksgiving Storms Knock Out Power and Disrupt US Travel",
+      "summary_en": "Powerful storms battered both coasts of the United States over Thanksgiving, knocking out electricity for hundreds of thousands of households and causing widespread airport cancellations and coastal flooding.",
+      "why_en": "The extreme weather caused unprecedented logistical disruptions during one of the year's busiest travel periods, including the first weather postponement of New York City's Thanksgiving parade in its 100-year history.",
+      "sources": [
+        {
+          "title": "Hundreds of thousands still without power a day after US slammed with Thanksgiving storms",
+          "url": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "Severe Thanksgiving storms leave roads flooded and trees fallen",
+          "url": "https://www.bbc.co.uk/news/videos/ckvg20y511p4o?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        },
+        {
+          "title": "'Can't control the weather': Sadness as Macy's Thanksgiving parade postponed",
+          "url": "https://www.bbc.co.uk/news/videos/cmx29qd8ew4xo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    },
+    {
+      "category": "SCIENCE",
+      "headline_en": "Satellite Data Reveals Coastal African Cities Sinking Faster Than Projected",
+      "summary_en": "New satellite radar research shows major coastal cities across Africa, including Lagos and Alexandria, are subsiding several millimetres each year, outpacing previous estimates by United Nations climate bodies.",
+      "why_en": "Rapid land subsidence, driven heavily by local groundwater extraction and development, substantially amplifies sea-level rise risks and threatens to expose millions of residents and billions in assets to catastrophic flooding.",
+      "sources": [
+        {
+          "title": "New satellite data shows how fast some African cities are sinking",
+          "url": "https://www.bbc.co.uk/news/articles/cq074p95z4llo?at_medium=RSS&at_campaign=rss",
+          "date": "",
+          "domain": "www.bbc.co.uk",
+          "source_country": ""
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "carousel": {
+      "files": [
+        "published/20261128-morning/carousel_01.jpg",
+        "published/20261128-morning/carousel_02.jpg",
+        "published/20261128-morning/carousel_03.jpg",
+        "published/20261128-morning/carousel_04.jpg",
+        "published/20261128-morning/carousel_05.jpg",
+        "published/20261128-morning/carousel_06.jpg",
+        "published/20261128-morning/carousel_07.jpg"
+      ],
+      "caption": "Here are five key global developments this morning, covering justice in Kenya, UK cyber disruption, regional security, severe US weather, and climate findings. Which story impacts your region the most?\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/27/kenyan-cult-leader-guilty-of-manslaughter-more-than-123-starvation-deaths?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c8wy5p6pv2e2o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/videos/cqm251rv0vyyo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/27/us-military-says-it-disabled-merchant-ship-trying-to-breach-iran-blockade?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #GlobalAffairs #CyberSecurity #Environment #Weather #Science #MiddleEast",
+      "alt_text": "English-only global news carousel with headlines and summaries."
+    },
+    "single": {
+      "file": "published/20261128-morning/single_headline.jpg",
+      "caption": "Our morning briefing highlights significant international events across world affairs, cybersecurity, climate, and public policy. Join the conversation and share your perspectives below.\n\nSources:\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/27/kenyan-cult-leader-guilty-of-manslaughter-more-than-123-starvation-deaths?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/c8wy5p6pv2e2o?at_medium=RSS&at_campaign=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/videos/cqm251rv0vyyo?at_medium=RSS&at_campaign=rss\n• www.aljazeera.com: https://www.aljazeera.com/news/2026/11/27/us-military-says-it-disabled-merchant-ship-trying-to-breach-iran-blockade?traffic_source=rss\n• www.bbc.co.uk: https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss\n\n#WorldNews #GlobalAffairs #CyberSecurity #Environment #Weather #Science #MiddleEast",
+      "alt_text": "English-only news graphic: Kenyan Cult Leader Convicted of Manslaughter in 123 Starvation Deaths"
+    }
+  },
+  "publishing_note": "Preview assets only until Instagram publishing is enabled."
+}
